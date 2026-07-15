@@ -3970,16 +3970,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "- Obliczyć co trzeba\n- Dobrać: rezystory, włącznik"
-		(exclude_from_sim no)
-		(at 209.55 119.126 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2488b5dc-7ba0-49e1-8376-49d22d1ed388")
-	)
 	(junction
 		(at 55.88 63.5)
 		(diameter 0)
@@ -4181,6 +4171,16 @@
 			(type default)
 		)
 		(uuid "1e52f5fa-deeb-4e8a-a781-99f8c55344c6")
+	)
+	(wire
+		(pts
+			(xy 33.02 48.26) (xy 34.29 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eb605f1-6654-4963-9164-7f896401305d")
 	)
 	(wire
 		(pts
@@ -4424,16 +4424,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 86.36) (xy 95.25 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4687ab8c-2a7f-47bd-81ee-8a6e885d563b")
-	)
-	(wire
-		(pts
 			(xy 43.18 78.74) (xy 43.18 80.01)
 		)
 		(stroke
@@ -4604,16 +4594,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 86.36) (xy 105.41 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "665662be-6c03-4c9b-8dde-aa5e0aeb06b5")
-	)
-	(wire
-		(pts
 			(xy 120.65 95.25) (xy 121.92 95.25)
 		)
 		(stroke
@@ -4621,6 +4601,16 @@
 			(type default)
 		)
 		(uuid "6c48ceec-8207-4b3f-b633-afe79694571a")
+	)
+	(wire
+		(pts
+			(xy 104.14 86.36) (xy 105.41 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6a0d31-1686-43d1-a4d0-706780185f77")
 	)
 	(wire
 		(pts
@@ -4784,6 +4774,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 86.36) (xy 96.52 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a791f5a-7fc5-497b-beb0-647b81954e4d")
+	)
+	(wire
+		(pts
 			(xy 194.31 149.86) (xy 195.58 149.86)
 		)
 		(stroke
@@ -4891,6 +4891,16 @@
 			(type default)
 		)
 		(uuid "aa8e531c-89d1-4b91-bc28-cfa69242b327")
+	)
+	(wire
+		(pts
+			(xy 33.02 45.72) (xy 34.29 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae7f039c-be85-479f-8a1a-7dc07261c810")
 	)
 	(wire
 		(pts
@@ -5024,6 +5034,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 86.36) (xy 87.63 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4c3bf1c-299d-4eb0-9e16-bdd1ca8ad8dc")
+	)
+	(wire
+		(pts
 			(xy 218.44 152.4) (xy 219.71 152.4)
 		)
 		(stroke
@@ -5101,16 +5121,6 @@
 			(type default)
 		)
 		(uuid "eb8e6f6b-071f-4ee0-aac5-0df9de9af7e1")
-	)
-	(wire
-		(pts
-			(xy 86.36 86.36) (xy 87.63 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb9275e2-58de-411d-8305-cf9f6f714ef2")
 	)
 	(wire
 		(pts
@@ -6845,10 +6855,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "11334c3f-709b-4106-9871-af6e05c7533e")
 		(property "Reference" "R2"
-			(at 57.15 88.8999 0)
+			(at 56.388 89.662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6858,8 +6867,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 57.15 91.4399 0)
+		(property "Value" "7.8k"
+			(at 55.88 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7007,7 +7016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12159fea-f42b-462e-9605-6af861865e1c")
-		(property "Reference" "J10"
+		(property "Reference" "LED2"
 			(at 211.455 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7069,7 +7078,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J10")
+					(reference "LED2")
 					(unit 1)
 				)
 			)
@@ -7227,6 +7236,86 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 27.94 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2463f6bb-6e9f-44c0-ae7e-14ec63be4872")
+		(property "Reference" "POWER1"
+			(at 28.575 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 28.575 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_AMASS:AMASS_XT30U-M_1x02_P5.0mm_Vertical"
+			(at 27.94 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 27.94 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c21b3ae5-cf1a-4aea-b76e-910a769a19a6")
+		)
+		(pin "1"
+			(uuid "d12cb42d-3084-4fe9-954f-01054798f374")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "POWER1")
 					(unit 1)
 				)
 			)
@@ -7482,7 +7571,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3011ffea-6863-4da1-8424-1471e071e889")
-		(property "Reference" "J12"
+		(property "Reference" "OLED1"
 			(at 84.455 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7550,7 +7639,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J12")
+					(reference "OLED1")
 					(unit 1)
 				)
 			)
@@ -7727,7 +7816,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40c6f130-38c9-4230-a8ff-f7e7e78d5a5b")
-		(property "Reference" "J1"
+		(property "Reference" "S1"
 			(at 188.595 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7792,7 +7881,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J1")
+					(reference "S1")
 					(unit 1)
 				)
 			)
@@ -8115,6 +8204,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 34.29 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "587523db-df12-4188-8eba-551259ed1b6d")
+		(property "Reference" "#PWR019"
+			(at 34.29 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 30.734 50.546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 34.29 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e6376d7e-afab-4312-b9b7-05f4c627e549")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 99.06 55.88 90)
 		(unit 1)
@@ -8205,7 +8371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bf5028f-ba52-4744-898a-85d6f942b7fc")
-		(property "Reference" "J4"
+		(property "Reference" "S4"
 			(at 213.995 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8270,7 +8436,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J4")
+					(reference "S4")
 					(unit 1)
 				)
 			)
@@ -8278,7 +8444,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 91.44 86.36 90)
+		(at 100.33 86.36 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8288,7 +8454,7 @@
 		(dnp no)
 		(uuid "75a4660d-53d6-47c4-8201-a746666ae405")
 		(property "Reference" "C8"
-			(at 91.44 83.058 90)
+			(at 100.33 83.058 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8297,8 +8463,8 @@
 				)
 			)
 		)
-		(property "Value" "C"
-			(at 91.44 90.424 90)
+		(property "Value" "1.5nF"
+			(at 100.33 90.424 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8308,7 +8474,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 95.25 85.3948 0)
+			(at 104.14 85.3948 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8319,7 +8485,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 86.36 0)
+			(at 100.33 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8330,7 +8496,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 91.44 86.36 0)
+			(at 100.33 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8444,7 +8610,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7791d961-89b5-42f2-81c0-f5ef00ea9d1b")
-		(property "Reference" "J8"
+		(property "Reference" "S8"
 			(at 257.175 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8509,7 +8675,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J8")
+					(reference "S8")
 					(unit 1)
 				)
 			)
@@ -8517,7 +8683,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 100.33 86.36 90)
+		(at 91.44 86.36 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8525,10 +8691,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7b2ac1df-600a-4c9f-b14f-06d817cf59e3")
 		(property "Reference" "R3"
-			(at 100.33 80.01 90)
+			(at 91.186 84.074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8537,8 +8702,8 @@
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 100.33 82.55 90)
+		(property "Value" "39k"
+			(at 91.44 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8548,7 +8713,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 100.33 88.138 90)
+			(at 91.44 88.138 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8559,7 +8724,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 86.36 0)
+			(at 91.44 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8570,7 +8735,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 100.33 86.36 0)
+			(at 91.44 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8694,7 +8859,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_SPST"
+		(property "Value" "SW"
 			(at 36.83 68.326 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8764,7 +8929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a50ecd8-5ada-43d6-90f9-9d246a53c2f6")
-		(property "Reference" "J11"
+		(property "Reference" "LED3"
 			(at 231.775 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8826,7 +8991,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J11")
+					(reference "LED3")
 					(unit 1)
 				)
 			)
@@ -8922,7 +9087,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96243d97-32d6-4e89-b9a6-8b69b234a0fb")
-		(property "Reference" "J9"
+		(property "Reference" "LED1"
 			(at 194.945 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8984,7 +9149,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J9")
+					(reference "LED1")
 					(unit 1)
 				)
 			)
@@ -9083,7 +9248,7 @@
 		(dnp no)
 		(uuid "99407432-4e45-468b-82b1-15d92a016838")
 		(property "Reference" "R1"
-			(at 49.53 89.916 90)
+			(at 49.53 84.074 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9092,8 +9257,8 @@
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 49.53 84.328 90)
+		(property "Value" "1.2k"
+			(at 49.53 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9402,7 +9567,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8f623bd-eaaf-4d22-9869-ebfeac95f68a")
-		(property "Reference" "J3"
+		(property "Reference" "S3"
 			(at 213.995 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9467,7 +9632,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J3")
+					(reference "S3")
 					(unit 1)
 				)
 			)
@@ -9485,7 +9650,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "add783e2-937d-4408-99e4-f8c047b5c3b6")
-		(property "Reference" "U1"
+		(property "Reference" "IMU1"
 			(at 207.01 63.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9567,7 +9732,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "U1")
+					(reference "IMU1")
 					(unit 1)
 				)
 			)
@@ -9585,7 +9750,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae309d43-9381-4ad5-9181-c1925975c26a")
-		(property "Reference" "J5"
+		(property "Reference" "S5"
 			(at 235.585 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9650,7 +9815,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J5")
+					(reference "S5")
 					(unit 1)
 				)
 			)
@@ -9807,6 +9972,84 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 34.29 45.72 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bba737c1-6481-4f7f-a756-ee070e357d4d")
+		(property "Reference" "#PWR09"
+			(at 30.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+7.4V"
+			(at 37.846 44.958 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 34.29 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e85546f3-7382-437b-8a1f-6548f1f751f1")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -10222,8 +10465,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 65.532 92.71 0)
+		(property "Value" "OPEN"
+			(at 64.262 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10293,7 +10536,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d19461f2-6755-48a9-a891-b8de43f0d68d")
-		(property "Reference" "J2"
+		(property "Reference" "S2"
 			(at 189.865 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10358,7 +10601,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J2")
+					(reference "S2")
 					(unit 1)
 				)
 			)
@@ -10610,7 +10853,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e441fd77-d4df-440a-aee9-d3b81d131559")
-		(property "Reference" "J7"
+		(property "Reference" "S7"
 			(at 257.175 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10675,7 +10918,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J7")
+					(reference "S7")
 					(unit 1)
 				)
 			)
@@ -11088,7 +11331,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa917585-f99b-4ea4-99e4-81dc91ca5a5e")
-		(property "Reference" "J6"
+		(property "Reference" "S6"
 			(at 235.585 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11153,7 +11396,7 @@
 		(instances
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "J6")
+					(reference "S6")
 					(unit 1)
 				)
 			)
