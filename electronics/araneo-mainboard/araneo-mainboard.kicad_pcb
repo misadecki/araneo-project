@@ -3363,7 +3363,7 @@
 		(layer "F.Cu")
 		(uuid "39eeed88-d829-4186-b95b-4a09b539b274")
 		(at 146.515 107.017)
-		(property "Reference" "IMU1"
+		(property "Reference" "IMU"
 			(at 2.485 -20.32 0)
 			(layer "F.SilkS" knockout)
 			(uuid "9c7efcf2-5f74-4202-8874-3a55eb54d8f1")
@@ -4107,8 +4107,8 @@
 		(at 153.62 122 -90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
-		(property "Reference" "OLED1"
-			(at 3 3.62 180)
+		(property "Reference" "OLED"
+			(at -1.5 -4.38 180)
 			(layer "F.SilkS" knockout)
 			(uuid "4902c77a-ad0e-4897-ad35-11ad7a7222dc")
 			(effects
@@ -9318,9 +9318,9 @@
 		(at 98 68 -90)
 		(descr "Connector XT30 Vertical Cable Male, https://www.tme.eu/Document/7d9d972ae3468777f69ec2ee99897652/XT30U-M.pdf")
 		(tags "RC Connector XT30")
-		(property "Reference" "POWER1"
-			(at -3 -6 0)
-			(layer "F.SilkS")
+		(property "Reference" "POWER"
+			(at -3 -8.5 0)
+			(layer "F.SilkS" knockout)
 			(uuid "cd6e0152-0ea7-4a3e-8109-8c5e68a93a12")
 			(effects
 				(font
@@ -9552,10 +9552,10 @@
 			(layer "F.Fab")
 			(uuid "4ee629a3-148d-4abe-9c72-e7451e7580f6")
 		)
-		(fp_text user "+"
-			(at 9 1.5 90)
-			(layer "F.SilkS")
-			(uuid "d4519bc9-c4a0-4cc9-9d98-dddbd9e5a3af")
+		(fp_text user "-"
+			(at 9 2 0)
+			(layer "F.SilkS" knockout)
+			(uuid "eb3a95b4-56b1-460f-addc-4160f3a75baf")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -9563,10 +9563,10 @@
 				)
 			)
 		)
-		(fp_text user "-"
-			(at -3.5 -2.5 0)
-			(layer "F.SilkS")
-			(uuid "eb3a95b4-56b1-460f-addc-4160f3a75baf")
+		(fp_text user "+"
+			(at -3 -3.5 90)
+			(layer "F.SilkS" knockout)
+			(uuid "d4519bc9-c4a0-4cc9-9d98-dddbd9e5a3af")
 			(effects
 				(font
 					(size 1.5 1.5)
@@ -10092,7 +10092,7 @@
 			(uuid "a1f6ba31-be37-4e52-af40-358249358cec")
 		)
 		(fp_text user "K"
-			(at 0.58 -2.5 0)
+			(at 0.15 -2.59 0)
 			(layer "F.SilkS" knockout)
 			(uuid "b59449e4-1dfc-4bf5-bd4f-9e98609e8244")
 			(effects
@@ -10747,7 +10747,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "LED3"
-			(at 2 -2.38 0)
+			(at 0.05 -2.45 0)
 			(layer "F.SilkS" knockout)
 			(uuid "2cd7c924-4c82-4d76-a307-5aa21f42395c")
 			(effects
@@ -13395,6 +13395,325 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "a524109f-fe26-4e1b-b363-d2363f527ad2")
+	)
+	(gr_text "K"
+		(at 149.45 114.77 0)
+		(layer "F.SilkS" knockout)
+		(uuid "4452974c-2064-4321-afc1-57be89cc8a33")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "K"
+		(at 154.53 114.69 0)
+		(layer "F.SilkS" knockout)
+		(uuid "7268fb39-2f3d-4266-81df-1627bc430bf2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "K"
+		(at 159.69 114.69 0)
+		(layer "F.SilkS" knockout)
+		(uuid "c0dcfb75-5003-4acc-a85d-9cc3423f669c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "+6V"
+		(at 97.5 107 0)
+		(layer "F.SilkS" knockout)
+		(uuid "7e8b9062-3594-45f8-80cb-727db1208b33")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 97.5 109.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "b508fa0f-c07b-4021-8dae-6e0591b5e76e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+6V"
+		(at 97.61 117.57 0)
+		(layer "F.SilkS" knockout)
+		(uuid "2f7b1552-a4d7-488b-a4b4-8ca1707b622f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 97.61 120.07 0)
+		(layer "F.SilkS" knockout)
+		(uuid "788a6021-0c4a-4ec1-97c3-82b5ec401ed4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+6V"
+		(at 109.3 107.05 0)
+		(layer "F.SilkS" knockout)
+		(uuid "a0534315-b7a3-4ed3-9f6b-932e01e42f63")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 109.3 109.55 0)
+		(layer "F.SilkS" knockout)
+		(uuid "036a23f0-dd79-44d1-8118-6f24488bb82d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+6V"
+		(at 109.4 117.6 0)
+		(layer "F.SilkS" knockout)
+		(uuid "91bedac8-5272-4659-b94e-1c8f6f6c14d4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 109.4 120.1 0)
+		(layer "F.SilkS" knockout)
+		(uuid "dc2783ba-6c84-4a02-812e-9e11ea3417b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+6V"
+		(at 109.6 127.78 0)
+		(layer "F.SilkS" knockout)
+		(uuid "90d8edbc-4430-4192-b0dd-74e5e63ef36c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 109.6 130.28 0)
+		(layer "F.SilkS" knockout)
+		(uuid "553a4d50-04ae-4606-b15e-f63fb689c896")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+6V"
+		(at 120.9 127.75 0)
+		(layer "F.SilkS" knockout)
+		(uuid "4e644e8a-e78c-4b15-ac06-0fff95fb9721")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PWM"
+		(at 120.9 130.25 0)
+		(layer "F.SilkS" knockout)
+		(uuid "328e8671-05b1-4ebe-aa20-df8f60e47563")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SDA"
+		(at 144 125.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "3b7cb44f-afe3-45f3-9824-274c715ebb15")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SCL"
+		(at 147 125.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "baf60947-8301-4244-bdf5-0eb1cf0bfc03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 150 125.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "5c275153-b7e3-4658-970c-13793a891c50")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "3V3"
+		(at 153.22 125.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "71d7bf8b-edf5-4c0a-9deb-dd4527a4e710")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 97.5 104.5 0)
+		(layer "F.SilkS" knockout)
+		(uuid "f6234862-0d0d-45b2-a6ea-082e7e074b4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 97.61 115.07 0)
+		(layer "F.SilkS" knockout)
+		(uuid "9a583a67-f247-47fc-999b-fbe7e08de855")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 109.3 104.55 0)
+		(layer "F.SilkS" knockout)
+		(uuid "b4549aba-2631-428c-90e1-3fc611c07859")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 109.4 115.1 0)
+		(layer "F.SilkS" knockout)
+		(uuid "61f490d9-9246-4111-be14-f5d3e54f6aef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 109.6 125.28 0)
+		(layer "F.SilkS" knockout)
+		(uuid "267a29f0-08e2-4e05-8fa9-5d5ac8333a89")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 120.9 125.25 0)
+		(layer "F.SilkS" knockout)
+		(uuid "7a74c2fb-07c7-4191-b5ec-7468c0596fef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
 	)
 	(gr_text "Michał Sadecki\nAraneo Project\nKoNaR"
 		(at 124.5 130.5 0)
