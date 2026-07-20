@@ -675,7 +675,7 @@
         "uuid": "0ff7269e-d15c-4d73-8399-8898e55a410d"
       }
     ],
-    "used_designators": "H1-4,LED4,F1,#PWR1-27,C1-9,A1,U1-4,D1-2,IMU1,J1-12,OLED1,POWER1,SW1,R1-7,L1",
+    "used_designators": "IMU1,OLED1,J1-12,LS1,POWER1,SW1,FB1-2,L1,R1-9,LED4,H1-4,F1,D1-2,U1-5,#PWR1-36,C1-18,A1",
     "variants": []
   },
   "sheets": [
