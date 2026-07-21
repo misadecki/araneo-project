@@ -5199,6 +5199,12 @@
 		(uuid "c6e54616-2a02-45bb-9d60-0b38588f928e")
 	)
 	(junction
+		(at 149.86 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0935c773-fe9f-4e07-b905-759cab0e429e")
+	)
+	(junction
 		(at 80.01 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5275,12 +5281,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6221b409-766a-4385-8ef7-962a815a276a")
-	)
-	(junction
-		(at 149.86 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "66d31fcd-5ca9-4267-9212-704ca0cd807f")
 	)
 	(junction
 		(at 80.01 49.53)
@@ -5484,16 +5484,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 127) (xy 113.03 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18bd66bc-bcca-4c75-a390-5f5a64a5ca80")
-	)
-	(wire
-		(pts
 			(xy 24.13 36.83) (xy 26.67 36.83)
 		)
 		(stroke
@@ -5504,7 +5494,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 49.53) (xy 60.96 49.53)
+			(xy 58.42 49.53) (xy 60.96 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5544,7 +5534,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 129.54) (xy 113.03 129.54)
+			(xy 106.68 129.54) (xy 113.03 129.54)
 		)
 		(stroke
 			(width 0)
@@ -5704,7 +5694,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 139.7) (xy 158.75 139.7)
+			(xy 167.64 139.7) (xy 158.75 139.7)
 		)
 		(stroke
 			(width 0)
@@ -5764,7 +5754,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 132.08) (xy 113.03 132.08)
+			(xy 106.68 132.08) (xy 113.03 132.08)
 		)
 		(stroke
 			(width 0)
@@ -5844,16 +5834,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 142.24) (xy 113.03 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40044561-02df-453f-bc2f-a99afde83893")
-	)
-	(wire
-		(pts
 			(xy 182.88 85.09) (xy 191.77 85.09)
 		)
 		(stroke
@@ -5871,16 +5851,6 @@
 			(type default)
 		)
 		(uuid "40fac22c-50e5-4699-ae6c-36065df989c3")
-	)
-	(wire
-		(pts
-			(xy 149.86 48.26) (xy 149.86 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41d74cf3-210b-46f3-964e-5c07d42f8c90")
 	)
 	(wire
 		(pts
@@ -5974,7 +5944,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 40.64) (xy 55.88 49.53)
+			(xy 58.42 41.91) (xy 58.42 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6091,6 +6061,16 @@
 			(type default)
 		)
 		(uuid "5af0766c-ef07-4ada-aa46-662cac7a7e21")
+	)
+	(wire
+		(pts
+			(xy 109.22 139.7) (xy 113.03 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ccf2a19-cbaf-4b33-8da5-a59c2028c4bb")
 	)
 	(wire
 		(pts
@@ -6334,6 +6314,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 144.78) (xy 113.03 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7702284f-5a99-490a-be8d-6da7d12d75c1")
+	)
+	(wire
+		(pts
 			(xy 210.82 102.87) (xy 213.36 102.87)
 		)
 		(stroke
@@ -6401,16 +6391,6 @@
 			(type default)
 		)
 		(uuid "7fcc8377-0a9b-4282-a283-7eaf1eb5cfc2")
-	)
-	(wire
-		(pts
-			(xy 105.41 139.7) (xy 113.03 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fda7ead-3c8a-4552-8a25-ba7545e65577")
 	)
 	(wire
 		(pts
@@ -6664,7 +6644,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 142.24) (xy 158.75 142.24)
+			(xy 167.64 142.24) (xy 158.75 142.24)
 		)
 		(stroke
 			(width 0)
@@ -6784,6 +6764,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 44.45) (xy 149.86 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aee1c2d2-561d-4bab-b3de-74fbb7e658db")
+	)
+	(wire
+		(pts
 			(xy 189.23 57.15) (xy 189.23 54.61)
 		)
 		(stroke
@@ -6871,16 +6861,6 @@
 			(type default)
 		)
 		(uuid "bfd55dac-a388-41a2-8873-43d980d9dd9e")
-	)
-	(wire
-		(pts
-			(xy 105.41 144.78) (xy 113.03 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1ebe10c-e79e-4e15-b1ec-ba167bd874ae")
 	)
 	(wire
 		(pts
@@ -7064,6 +7044,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 44.45) (xy 149.86 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcdb44fc-b117-4282-a8bc-9dbfde0494c5")
+	)
+	(wire
+		(pts
 			(xy 72.39 167.64) (xy 78.74 167.64)
 		)
 		(stroke
@@ -7101,6 +7091,16 @@
 			(type default)
 		)
 		(uuid "e4b9c87a-4411-490f-a9f8-3616042ecf1c")
+	)
+	(wire
+		(pts
+			(xy 106.68 127) (xy 113.03 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e677d70d-f439-4653-b49d-0f873f3f8d0f")
 	)
 	(wire
 		(pts
@@ -7181,6 +7181,16 @@
 			(type default)
 		)
 		(uuid "efde68e9-ec94-4be6-b770-03d82994496d")
+	)
+	(wire
+		(pts
+			(xy 109.22 142.24) (xy 113.03 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0328805-8226-4fcf-a920-7e3059fa5cfb")
 	)
 	(wire
 		(pts
@@ -8172,6 +8182,16 @@
 		)
 		(uuid "0c6bcd6d-76ee-440d-8d09-dcac913e8289")
 	)
+	(label "D1"
+		(at 109.22 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1001b9c9-af24-488b-b630-03cc519a3a3f")
+	)
 	(label "D3"
 		(at 59.69 110.49 0)
 		(effects
@@ -8201,26 +8221,6 @@
 			(justify right bottom)
 		)
 		(uuid "13c229f8-435d-41d1-ae64-bd2c8b132a2e")
-	)
-	(label "GPIO14"
-		(at 88.9 92.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "155cf26c-696e-4c3d-a09b-2dfe7a205921")
-	)
-	(label "GPIO15"
-		(at 88.9 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "17561b5c-b0e8-461b-8aeb-76889f2bc80b")
 	)
 	(label "+3V3"
 		(at 29.21 87.63 180)
@@ -8252,6 +8252,16 @@
 		)
 		(uuid "1846fddb-74b0-434a-8fab-add6ff4aa95e")
 	)
+	(label "GPIO17"
+		(at 88.9 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "191836f8-7167-4a13-8ae6-8239f02ea992")
+	)
 	(label "+6V"
 		(at 31.75 179.07 180)
 		(effects
@@ -8261,6 +8271,36 @@
 			(justify right bottom)
 		)
 		(uuid "1cb0a79b-7a9a-48b5-8d77-c0da260479d2")
+	)
+	(label "GPIO12"
+		(at 88.9 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1cdc9494-d9bd-4282-8b53-1e328e4ad7ef")
+	)
+	(label "SDA_IMU"
+		(at 167.64 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "24a203ca-eaf9-4b21-8142-11faea86855f")
+	)
+	(label "GPIO10"
+		(at 88.9 92.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2b8736c9-56d9-40c4-b18a-3bd41332790a")
 	)
 	(label "GPIO22"
 		(at 166.37 129.54 180)
@@ -8282,7 +8322,7 @@
 		)
 		(uuid "38f2fa8b-cad5-4682-ac87-8247f0becdd8")
 	)
-	(label "+7.4V"
+	(label "+7.4V_F"
 		(at 25.4 31.75 180)
 		(effects
 			(font
@@ -8291,6 +8331,16 @@
 			(justify right bottom)
 		)
 		(uuid "39896de7-35d0-423d-bb84-8f15fcb3a4c9")
+	)
+	(label "GPIO10"
+		(at 106.68 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b1de303-2213-4b32-a910-c6661b1d6f54")
 	)
 	(label "+5V_LDO"
 		(at 203.2 49.53 0)
@@ -8302,16 +8352,6 @@
 		)
 		(uuid "3eb8727f-2e56-45c3-b185-45765a3b304d")
 	)
-	(label "D1"
-		(at 109.22 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3f116d22-eacf-4291-b6e9-bfa3b1e5e8e8")
-	)
 	(label "EN"
 		(at 109.22 134.62 0)
 		(effects
@@ -8321,16 +8361,6 @@
 			(justify left bottom)
 		)
 		(uuid "41d34d90-1d74-4d20-b1bf-d12b29610e8f")
-	)
-	(label "GPIO22"
-		(at 88.9 97.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "42b46af1-bcdb-4de3-8e68-eb70e005466b")
 	)
 	(label "SPEAKER"
 		(at 167.64 124.46 180)
@@ -8362,16 +8392,6 @@
 		)
 		(uuid "50da5b84-22db-4341-b5a5-445d6f5cc0ee")
 	)
-	(label "GPIO27"
-		(at 166.37 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "51166a7e-65f0-47c9-a1eb-e893cc66cf68")
-	)
 	(label "PWM5"
 		(at 107.95 116.84 0)
 		(effects
@@ -8382,8 +8402,8 @@
 		)
 		(uuid "5609ec3c-898d-4c85-bd14-caa203778147")
 	)
-	(label "+7.4V"
-		(at 55.88 40.64 180)
+	(label "+7.4V_F"
+		(at 58.42 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8391,6 +8411,16 @@
 			(justify right bottom)
 		)
 		(uuid "58522008-a980-49fa-823e-4cb17b0ecd4f")
+	)
+	(label "D3"
+		(at 109.22 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f6c2444-c219-4bef-92c1-2c4cce909ded")
 	)
 	(label "PWM2"
 		(at 107.95 109.22 0)
@@ -8422,26 +8452,6 @@
 		)
 		(uuid "661c6232-9db4-41c4-a0c1-81e80deb761f")
 	)
-	(label "GPIO14"
-		(at 105.41 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "661f9f17-fadf-4f7b-8e02-dca04b987765")
-	)
-	(label "GPIO13"
-		(at 105.41 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "66c02ead-675a-42f0-95d3-d72f4cc1629d")
-	)
 	(label "PWM6"
 		(at 107.95 119.38 0)
 		(effects
@@ -8451,26 +8461,6 @@
 			(justify left bottom)
 		)
 		(uuid "6c3b3fcc-2b72-4bd9-a6b5-e868df00dfe9")
-	)
-	(label "SDA_IMU"
-		(at 167.64 114.3 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "72bf42ab-ef0d-45bb-83aa-4d8439a73904")
-	)
-	(label "GPIO26"
-		(at 166.37 139.7 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "740bf208-f644-4913-922c-308cb2b5b2d9")
 	)
 	(label "PWM5"
 		(at 78.74 167.64 180)
@@ -8502,16 +8492,6 @@
 		)
 		(uuid "78a830b9-75fe-423b-841e-078a690f7c0c")
 	)
-	(label "GPIO15"
-		(at 105.41 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7aab34bf-4ca8-4780-a7ab-40b2e7c72060")
-	)
 	(label "+6V"
 		(at 77.47 165.1 180)
 		(effects
@@ -8521,6 +8501,26 @@
 			(justify right bottom)
 		)
 		(uuid "7e1277d6-e183-4e0f-82d4-bd72d2319520")
+	)
+	(label "GPIO17"
+		(at 167.64 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7faf3e7f-b394-4533-a34b-adfe55809823")
+	)
+	(label "GPIO8"
+		(at 106.68 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81c1b424-b16d-4d74-988d-d3e816ffe211")
 	)
 	(label "+6V"
 		(at 77.47 179.07 180)
@@ -8532,16 +8532,6 @@
 		)
 		(uuid "88bd1b5b-170e-4bc9-adf4-21ecb37f19ed")
 	)
-	(label "GPIO27"
-		(at 88.9 102.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "90994e04-6214-4596-bedb-9cdaf40edfdd")
-	)
 	(label "SCL_IMU"
 		(at 182.88 85.09 0)
 		(effects
@@ -8552,6 +8542,16 @@
 		)
 		(uuid "9332f5d4-bc4e-4304-a76a-010584f3c4ac")
 	)
+	(label "GPIO16"
+		(at 88.9 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "945503bc-9e54-4a81-ae91-8ee7d61ff790")
+	)
 	(label "+6V"
 		(at 99.06 165.1 180)
 		(effects
@@ -8561,6 +8561,16 @@
 			(justify right bottom)
 		)
 		(uuid "a22d05d4-b11d-42f1-acb1-4f04b2741b4b")
+	)
+	(label "GPIO16"
+		(at 167.64 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a4e5b669-56c6-43c6-a7c4-f399ab6656c9")
 	)
 	(label "+3V3_RC"
 		(at 167.64 134.62 180)
@@ -8602,16 +8612,6 @@
 		)
 		(uuid "b49bc870-33e0-4a7b-804e-dea53235b85f")
 	)
-	(label "SCL_IMU"
-		(at 167.64 116.84 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b94a3e47-0129-42bd-9e25-fe4848c34a85")
-	)
 	(label "PWM4"
 		(at 57.15 181.61 180)
 		(effects
@@ -8621,6 +8621,16 @@
 			(justify right bottom)
 		)
 		(uuid "bb6d3935-af8c-4ff2-a6fb-7257689904de")
+	)
+	(label "SCL_IMU"
+		(at 167.64 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bd6ac4b6-6c84-446b-9528-f690d91910c8")
 	)
 	(label "SDA_OLED"
 		(at 34.29 95.25 180)
@@ -8641,16 +8651,6 @@
 			(justify left bottom)
 		)
 		(uuid "c2bb3f36-4ee0-4aaf-804a-4c123d3b468b")
-	)
-	(label "D2"
-		(at 109.22 129.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c4adc4b4-7c24-4dbc-ac41-71bdb9bc81b3")
 	)
 	(label "+6V"
 		(at 99.06 179.07 180)
@@ -8702,15 +8702,15 @@
 		)
 		(uuid "cae7e4c8-f93f-4562-b014-095635b689e6")
 	)
-	(label "D3"
-		(at 109.22 132.08 0)
+	(label "+7.4V_F"
+		(at 152.4 44.45 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "cc2487bf-df14-45ee-839b-c45533edafbb")
+		(uuid "d0622769-ee21-4833-a40b-00944687d036")
 	)
 	(label "PWM1"
 		(at 107.95 106.68 0)
@@ -8732,7 +8732,7 @@
 		)
 		(uuid "d63e1522-f0fb-4695-8ea8-83c61e5763d6")
 	)
-	(label "GPIO12"
+	(label "GPIO8"
 		(at 88.9 87.63 180)
 		(effects
 			(font
@@ -8740,7 +8740,37 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d77f66b3-4e09-414b-a9b6-b574553a1e87")
+		(uuid "d9424355-7a5a-4bc2-b8f1-3cffcfe9ab3a")
+	)
+	(label "GPIO9"
+		(at 88.9 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dc58ac3d-625f-4adf-b04b-c818551b9f4d")
+	)
+	(label "D2"
+		(at 109.22 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dea49ad4-17e3-4d8f-9b07-cec10e716667")
+	)
+	(label "GPIO22"
+		(at 88.9 102.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e3c96705-5edd-46e3-b21c-ba5d77fbb475")
 	)
 	(label "SHDN"
 		(at 191.77 134.62 0)
@@ -8772,25 +8802,15 @@
 		)
 		(uuid "e861058e-15a7-4cef-81a3-431a8ebdce90")
 	)
-	(label "GPIO13"
-		(at 88.9 90.17 180)
+	(label "GPIO9"
+		(at 106.68 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "ef46eb0f-f83f-4313-bf1f-72c5d512778d")
-	)
-	(label "GPIO26"
-		(at 88.9 100.33 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f4a6204f-06f7-4a8a-91ad-c96d9a3d223c")
+		(uuid "f0d99e15-8872-47a7-8c82-cbf1e0c33467")
 	)
 	(label "+6V"
 		(at 30.48 165.1 180)
@@ -10781,84 +10801,6 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 149.86 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3ce58952-88ae-409d-ac21-a40986d9f84e")
-		(property "Reference" "#PWR01"
-			(at 149.86 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+7.4V"
-			(at 149.86 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 149.86 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c4a5b605-63f4-4603-a9ec-7821e947365b")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "#PWR01")
 					(unit 1)
 				)
 			)
