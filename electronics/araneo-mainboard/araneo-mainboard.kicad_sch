@@ -5391,16 +5391,6 @@
 		)
 		(uuid "80d56a1b-3d3c-46c6-ad52-2c0a1f56db37")
 	)
-	(text "TO DO:\n- stabilizator 6V jak u Maślaka\n- 3x vias na linii zasilania"
-		(exclude_from_sim no)
-		(at 246.126 78.232 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "abcd0b5e-4d23-4fd6-aa39-c63d9c59083b")
-	)
 	(text "PERIPHERIES"
 		(exclude_from_sim no)
 		(at 25.146 77.978 0)
@@ -5410,6 +5400,16 @@
 			)
 		)
 		(uuid "c6e54616-2a02-45bb-9d60-0b38588f928e")
+	)
+	(text "Wartości rezystorów z datasheet\nKondensatory MLCC z niskim ESR"
+		(exclude_from_sim no)
+		(at 193.802 62.484 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "de3dd01c-c48b-4a3f-b293-db995fb33edd")
 	)
 	(text "Vin, GND - jak największe\nKondensatory jak najbliżej\nŚcieżka SW - jak najkrótsza i dość szeroka\nŚcieżka FB - jak najkrótsza i osobna ścieżka GND i Vout\nDużo GND do odprowadzania ciepła\nDioda TVS dla szpilek napięcia przy podłączaniu (> 15V)"
 		(exclude_from_sim no)
@@ -6751,6 +6751,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 26.67) (xy 135.89 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ca5bc90-8f15-4ac7-a957-da34265e3d24")
+	)
+	(wire
+		(pts
 			(xy 224.79 49.53) (xy 224.79 55.88)
 		)
 		(stroke
@@ -6998,16 +7008,6 @@
 			(type default)
 		)
 		(uuid "831b1144-a738-4e03-8982-72dfc5e748b3")
-	)
-	(wire
-		(pts
-			(xy 82.55 27.94) (xy 82.55 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "834dd838-54b3-4f46-9beb-9fb5e70d1fc6")
 	)
 	(wire
 		(pts
@@ -7341,16 +7341,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 27.94) (xy 74.93 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa801a54-37f1-488b-8fa4-aa7b83156bbc")
-	)
-	(wire
-		(pts
 			(xy 57.15 154.94) (xy 55.88 154.94)
 		)
 		(stroke
@@ -7398,6 +7388,16 @@
 			(type default)
 		)
 		(uuid "b0bd0dcb-1607-4fc6-92e0-b1fb7ebe89e4")
+	)
+	(wire
+		(pts
+			(xy 135.89 26.67) (xy 135.89 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b120db8b-36fb-471d-bb5d-000722dd96af")
 	)
 	(wire
 		(pts
@@ -7641,6 +7641,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 26.67) (xy 125.73 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d03e7d28-42af-47e0-bfad-9c9968139ba0")
+	)
+	(wire
+		(pts
 			(xy 24.13 137.16) (xy 24.13 138.43)
 		)
 		(stroke
@@ -7648,6 +7658,16 @@
 			(type default)
 		)
 		(uuid "d2fff3b8-978b-46ca-8803-19dc0f2ca38b")
+	)
+	(wire
+		(pts
+			(xy 115.57 26.67) (xy 118.11 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d419f555-7a05-4765-bb8d-80f94acc686c")
 	)
 	(wire
 		(pts
@@ -7728,16 +7748,6 @@
 			(type default)
 		)
 		(uuid "e29da7fe-f704-408d-b8c1-7d98774f9626")
-	)
-	(wire
-		(pts
-			(xy 82.55 34.29) (xy 82.55 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e33317f6-1bd0-458c-8108-e3ecefbd0dad")
 	)
 	(polyline
 		(pts
@@ -10919,6 +10929,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 121.92 26.67 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1baf89bb-9b3e-4046-92bf-80f8c17187f4")
+		(property "Reference" "R15"
+			(at 117.094 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 121.92 29.464 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 121.92 28.448 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 121.92 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "30b22450-3cb9-44dd-8088-75fa5749c094")
+		)
+		(pin "1"
+			(uuid "3120c222-445c-4119-b799-c076ef1fcc29")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 208.28 106.68 180)
 		(unit 1)
@@ -11072,84 +11161,6 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 72.39 27.94 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1e496175-fcfd-44cd-9921-2eb7f88d9bed")
-		(property "Reference" "#PWR065"
-			(at 72.39 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 72.39 31.75 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 72.39 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 72.39 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a221f96-a647-4626-a569-70105b743096")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -13358,6 +13369,84 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SparkFun-PowerSymbol:GND")
+		(at 115.57 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "41cfd607-a0b2-4c08-aa75-40c313bfdefe")
+		(property "Reference" "#PWR065"
+			(at 115.57 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 30.48 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 115.57 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e4808ae-a43d-4a98-baa9-86c954251cde")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_SPST")
 		(at 35.56 49.53 0)
 		(unit 1)
@@ -14619,98 +14708,6 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "R18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SparkFun-LED:LED")
-		(at 82.55 31.75 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5e6fa389-0ee0-4b03-ba93-b152449064a7")
-		(property "Reference" "D5"
-			(at 84.328 27.94 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "POWER_LED"
-			(at 84.582 30.226 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric"
-			(at 77.47 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 69.85 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PROD_ID" "LED-"
-			(at 72.39 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "387d20e7-4fa0-4aaa-8b47-49dab4f70634")
-		)
-		(pin "2"
-			(uuid "d127ec6f-eb20-48e8-806a-6f6965b53a01")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -19441,85 +19438,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 78.74 27.94 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c10d6c99-dc9a-41a3-aae7-809674eb7b35")
-		(property "Reference" "R15"
-			(at 78.74 25.654 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 78.74 30.734 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 78.74 29.718 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 78.74 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "41656332-da52-4114-9d87-cfefdde6da44")
-		)
-		(pin "1"
-			(uuid "7d4fda0c-e1fb-401b-ab66-5b64de84cdfd")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 251.46 134.62 0)
 		(unit 1)
@@ -21878,6 +21796,98 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-LED:LED")
+		(at 130.81 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fc05236a-8f93-4145-8d07-9c24ded14b54")
+		(property "Reference" "D5"
+			(at 126.238 25.146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "POWER_LED"
+			(at 132.334 25.654 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric"
+			(at 130.81 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 130.81 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" "LED-"
+			(at 130.81 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4a489801-edd5-4413-aef3-6c1fffd746b3")
+		)
+		(pin "2"
+			(uuid "ede932d3-2e83-4a33-b037-ac97f41e6b74")
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
+					(reference "D5")
 					(unit 1)
 				)
 			)
