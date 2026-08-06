@@ -1610,7 +1610,7 @@
 				(justify left top)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.memsic.com/Public/Uploads/uploadfile/files/20220119/MMC5983MADatasheetRevA.pdf"
 			(at 90.17 243.18 0)
 			(hide yes)
 			(show_name no)

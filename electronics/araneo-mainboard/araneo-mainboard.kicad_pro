@@ -94,6 +94,10 @@
           ""
         ],
         [
+          "courtyards_overlap|126155000|72675000|a3d1e85e-2e1d-4f16-b1c4-87ab74c04fc7|e7901cb9-cafb-440d-8093-df8d2966dfcc",
+          ""
+        ],
+        [
           "courtyards_overlap|126255000|67655000|9b7de179-6093-490f-9714-f474db208ee6|a3d1e85e-2e1d-4f16-b1c4-87ab74c04fc7",
           ""
         ],
@@ -127,10 +131,6 @@
         ],
         [
           "courtyards_overlap|131130000|78240000|66cd6abf-e0cb-4f04-8519-a2e9560b97c5|a3d1e85e-2e1d-4f16-b1c4-87ab74c04fc7",
-          ""
-        ],
-        [
-          "courtyards_overlap|131755000|65075000|a3d1e85e-2e1d-4f16-b1c4-87ab74c04fc7|e7901cb9-cafb-440d-8093-df8d2966dfcc",
           ""
         ],
         [
@@ -770,7 +770,7 @@
         "uuid": "0ff7269e-d15c-4d73-8399-8898e55a410d"
       }
     ],
-    "used_designators": "F1-2,U1-6,D1-7,C1-43,A1,IC1-3,IMU1,SW1-3,S2-8,PS1,#PWR1-88,FB1-4,L1-2,R1-20,CFF1,LED4,H1-5,OLED1,J1-12,LS1,POWER1",
+    "used_designators": "POWER1,LS1,J1-12,OLED1,H1-5,LED4,CFF1,R1-20,F1-2,U1-6,D1-7,C1-45,A1,IMU1,IC1-3,SW1-3,S2-8,PS1,#PWR1-90,FB1-4,L1-2",
     "variants": []
   },
   "sheets": [
