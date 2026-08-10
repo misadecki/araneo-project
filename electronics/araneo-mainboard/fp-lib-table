@@ -4,4 +4,7 @@
 	(lib (name "Module_RaspberryPi_Pico") (type "KiCad") (uri "${KIPRJMOD}/libs/Module_RaspberryPi_Pico.pretty") (options "") (descr ""))
 	(lib (name "Module_RaspberryPi_Pico_ModularElements") (type "KiCad") (uri "${KIPRJMOD}/libs/Module_RaspberryPi_Pico_ModularElements.pretty") (options "") (descr ""))
 	(lib (name "usini_sensors") (type "KiCad") (uri "${KIPRJMOD}/libs/usini_sensors.pretty") (options "") (descr ""))
+	(lib (name "custom_footprints") (type "KiCad") (uri "${KIPRJMOD}/libs/custom_footprints.pretty") (options "") (descr ""))
+	(lib (name "custom_footprints") (type "KiCad") (uri "${KIPRJMOD}/libs/custom_footprints.pretty") (options "") (descr ""))
+	(lib (name "custom_footprints") (type "KiCad") (uri "${KIPRJMOD}/libs/custom_footprints.pretty") (options "") (descr ""))
 )
