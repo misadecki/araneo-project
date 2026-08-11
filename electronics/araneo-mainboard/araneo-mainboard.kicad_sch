@@ -6238,7 +6238,7 @@
 		(uuid "37c28dce-1e8e-43c2-bb65-53498dbd9c1b")
 	)
 	(rectangle
-		(start 49.53 24.13)
+		(start 49.53 20.32)
 		(end 143.51 74.93)
 		(stroke
 			(width 0)
@@ -6274,7 +6274,7 @@
 		(uuid "70890c9c-b582-493e-90d1-c1b39600df98")
 	)
 	(rectangle
-		(start 15.24 21.59)
+		(start 15.24 20.32)
 		(end 49.53 73.66)
 		(stroke
 			(width 0)
@@ -6309,7 +6309,7 @@
 	)
 	(text "POWER"
 		(exclude_from_sim no)
-		(at 40.64 19.304 0)
+		(at 40.894 17.78 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6349,7 +6349,7 @@
 	)
 	(text "Buck 7.4V -> 6V"
 		(exclude_from_sim no)
-		(at 68.072 22.098 0)
+		(at 68.072 18.034 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -24518,7 +24518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 219.4052 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -27119,7 +27119,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 69.5452 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -28216,7 +28216,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 225.7552 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -29702,7 +29702,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 86.0552 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -29940,7 +29940,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 78.4352 58.42 0)
 			(hide yes)
 			(show_name no)
