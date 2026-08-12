@@ -6616,12 +6616,6 @@
 		(uuid "755bea1a-2c90-4a8b-a683-25bfb98b0219")
 	)
 	(junction
-		(at 22.86 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a922312-1faf-405b-af83-cc010fa4d30d")
-	)
-	(junction
 		(at 351.79 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7513,16 +7507,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 105.41) (xy 22.86 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4129a66e-01ef-4417-8926-eae7c5b29b4e")
-	)
-	(wire
-		(pts
 			(xy 85.09 40.64) (xy 85.09 43.18)
 		)
 		(stroke
@@ -8063,7 +8047,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 93.98) (xy 29.21 93.98)
+			(xy 21.59 93.98) (xy 29.21 93.98)
 		)
 		(stroke
 			(width 0)
@@ -8660,16 +8644,6 @@
 			(type default)
 		)
 		(uuid "a18e890d-e7df-48ae-9174-4b052d0cd31c")
-	)
-	(wire
-		(pts
-			(xy 21.59 93.98) (xy 22.86 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1e51978-f7d1-441a-921f-660dfa8985b1")
 	)
 	(wire
 		(pts
@@ -22128,84 +22102,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 22.86 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3e7e1f13-f4ab-4866-b84d-2964166e5df1")
-		(property "Reference" "#PWR039"
-			(at 22.86 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 22.86 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 22.86 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "653e5349-b40c-48dc-afcd-7a3cfd7c518a")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 15.24 16.51 0)
 		(unit 1)
@@ -29983,87 +29879,6 @@
 			(project "araneo-mainboard"
 				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
 					(reference "C37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 22.86 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d1d1e7ea-a0ed-446c-96dc-277cc87d33f4")
-		(property "Reference" "C19"
-			(at 26.162 96.774 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 26.416 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 23.8252 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 22.86 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5ff47fc1-9926-40dd-afd1-47943c39ce91")
-		)
-		(pin "2"
-			(uuid "a916693a-fe91-466c-9e34-6ff71efa43d2")
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/0ff7269e-d15c-4d73-8399-8898e55a410d"
-					(reference "C19")
 					(unit 1)
 				)
 			)
