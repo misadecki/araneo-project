@@ -5148,17 +5148,6 @@
 			(uuid "b6a1f3ce-27a1-4bf8-aa07-ad3ce735a1e3")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3RD_PARTY}/3dmodels/com_github_sparkfun_SparkFun-KiCad-Libraries/Connector.3dshapes/Screw_Terminal_3.5mm_2P_Blue.step"
-			(offset
-				(xyz 1.8 3.4 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -90 0 0)
-			)
-		)
 	)
 	(footprint "PCM_SparkFun-LED:LED_0603_1608Metric"
 		(layer "F.Cu")
@@ -13178,15 +13167,15 @@
 			(uuid "3e7ddfe2-494a-45d8-801a-117c98ac545d")
 		)
 		(embedded_fonts no)
-		(model "BMI270.stp"
+		(model "${KIPRJMOD}/libs/models/BMI270.stp"
 			(offset
-				(xyz 0 0 0.1299999933)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
