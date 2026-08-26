@@ -8,4 +8,5 @@ target_include_directories(app PRIVATE inc)
 target_sources(app PRIVATE
   src/main.c
   src/oled.c
+  src/icons.c
 )
