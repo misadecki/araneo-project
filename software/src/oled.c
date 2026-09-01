@@ -6,18 +6,16 @@
 
 static const struct device *display = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 
-const uint8_t img[] = {0xff, 0xff, 0xff};
-
 LOG_MODULE_REGISTER(oled, 3);
 
 void setup_display() {
   if (!device_is_ready(display)) {
-    LOG_ERR("Display not ready\n");
+    LOG_ERR("Display not ready");
     return;
   }
 
   if (cfb_framebuffer_init(display)) {
-     LOG_ERR("CFB init failed\n");
+     LOG_ERR("CFB init failed");
     return;
   }
 
