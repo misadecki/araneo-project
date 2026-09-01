@@ -1,7 +1,7 @@
 #ifndef OLED_H__
 #define OLED_H__
 
-#include <zephyr/kernel.h>
+#include <stdint.h>
 
 #define OLED_WIDTH 128
 #define OLED_HEIGHT 64
