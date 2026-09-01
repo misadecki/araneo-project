@@ -20,6 +20,7 @@ typedef enum {
 } servo_id_t;
 
 int servo_init_all(void);
+int servo_id_from_str(const char *str, servo_id_t *id);
 int servo_init(servo_id_t id);
 int servo_set_angle(servo_id_t id, uint32_t angle_deg);
 int32_t servo_get_angle(servo_id_t id);

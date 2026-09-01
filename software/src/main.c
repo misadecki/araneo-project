@@ -12,7 +12,6 @@ int main(void) {
 
   while(1) {
     draw_img(get_icon((ICON_ELIZA + i) % ICON_COUNT));
-    servo_set_angle(SERVO_COXA_LEFT_BACK, 120);
     ++i;
     k_msleep(2000);
   }

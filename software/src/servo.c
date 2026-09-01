@@ -1,6 +1,7 @@
 #include "servo.h"
 #include <zephyr/drivers/pwm.h>
 #include <zephyr/logging/log.h>
+#include <strings.h>
 
 LOG_MODULE_REGISTER(servo, LOG_LEVEL_INF);
 
@@ -10,6 +11,22 @@ struct servo_config {
   int32_t current_angle;
 };
 
+struct servo_arg_map {
+  const char *arg;
+  servo_id_t id;
+};
+
+static struct servo_arg_map servo_args[] = {
+  {"coxa_lf", SERVO_COXA_LEFT_FRONT},
+  {"coxa_lb", SERVO_COXA_LEFT_BACK},
+  {"coxa_rf", SERVO_COXA_RIGHT_FRONT},
+  {"coxa_rb", SERVO_COXA_RIGHT_BACK},
+  {"tibia_lf", SERVO_TIBIA_LEFT_FRONT},
+  {"tibia_lb", SERVO_TIBIA_LEFT_BACK},
+  {"tibia_rf", SERVO_TIBIA_RIGHT_FRONT},
+  {"tibia_rb", SERVO_TIBIA_RIGHT_BACK},
+};
+
 static struct servo_config servos[SERVO_COUNT] = {
   [SERVO_COXA_LEFT_BACK] = {
     .pwm = PWM_DT_SPEC_GET(DT_ALIAS(servolf)),
@@ -17,6 +34,20 @@ static struct servo_config servos[SERVO_COUNT] = {
     .offset_deg = 0
   },
 };
+
+int servo_id_from_str(const char *str, servo_id_t *id) {
+  if (str == NULL || id == NULL)
+    return -1;
+
+  for (size_t i = 0; i < sizeof(servo_args) / sizeof(servo_args[0]); ++i) {
+    if (strcasecmp(str, servo_args[i].arg) == 0) {
+      *id = servo_args[i].id;
+      return 0;
+    }
+  }
+
+  return -2;
+}
 
 int servo_get_angle(servo_id_t id) {
   if (id >= SERVO_COUNT)
@@ -47,7 +78,7 @@ int servo_init_all(void) {
 }
 
 int servo_set_angle(servo_id_t id, uint32_t angle_deg) {
-  if (id >= SERVO_COUNT)
+  if (id >= SERVO_COUNT || !pwm_is_ready_dt(&servos[id].pwm))
     return -1;
 
   struct servo_config *s = &servos[id];

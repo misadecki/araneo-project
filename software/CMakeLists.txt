@@ -10,4 +10,5 @@ target_sources(app PRIVATE
   src/oled.c
   src/icons.c
   src/servo.c
+  src/commands.c
 )
