@@ -1,7 +1,8 @@
 #ifndef SERVO_H__
 #define SERVO_H__
 
-#include <stdint.h>
+#include <zephyr/kernel.h>
+#include <zephyr/drivers/pwm.h>
 
 #define MIN_PULSE_US 1000
 #define MAX_PULSE_US 2000
@@ -27,6 +28,17 @@ typedef enum {
 
   SERVO_COUNT
 } servo_id_t;
+
+struct servo_config {
+  struct pwm_dt_spec pwm;
+  int32_t offset_deg;
+  int32_t current_angle;
+};
+
+struct servo_arg_map {
+  const char *arg;
+  servo_id_t id;
+};
 
 int servo_init_all(void);
 int servo_id_from_str(const char *str, servo_id_t *id);

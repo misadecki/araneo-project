@@ -1,4 +1,6 @@
 #include "icons.h"
+#include <stdlib.h>
+#include <strings.h>
 
 static const uint8_t angry_face[] = {
    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
@@ -1344,4 +1346,30 @@ const uint8_t *get_icon(icon_id_t icon) {
   }
 
   return icon_table[0];
+}
+
+static struct icon_arg_map icon_args[] = {
+  {"standard", ICON_STANDARD},
+  {"angry", ICON_ANGRY},
+  {"smile", ICON_SMILE},
+  {"sad", ICON_SAD},
+  {"eliza", ICON_ELIZA},
+  {"excited", ICON_EXCITED},
+  {"sleep", ICON_SLEEP},
+  {"shocked", ICON_SHOCKED},
+  {"kidding", ICON_KIDDING}
+};
+
+int icon_id_from_str(const char *str, icon_id_t *id) {
+  if (str == NULL || id == NULL)
+    return -1;
+
+  for (size_t i = 0; i < sizeof(icon_args) / sizeof(icon_args[0]); ++i) {
+    if (strcasecmp(str, icon_args[i].arg) == 0) {
+      *id = icon_args[i].id;
+      return 0;
+    }
+  }
+
+  return -2;
 }

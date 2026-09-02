@@ -1,6 +1,8 @@
 #include "commands.h"
 #include <stdlib.h>
+#include "icons.h"
 #include "servo.h"
+#include "oled.h"
 
 int cmd_servo_set_angle(const struct shell *sh, int argc, char **argv) {
   if (argc < 3) {
@@ -36,4 +38,23 @@ int cmd_servo_set_angle(const struct shell *sh, int argc, char **argv) {
   return 0;
 }
 
+int cmd_oled_set_face(const struct shell *sh, int argc, char **argv) {
+  if (argc < 1) {
+    shell_error(sh, "Usage: face [face_id] <standard | angry | sad | smile | "
+                "kidding | eliza | sleep | shocked | excited>");
+    return -1;
+  }
+
+  icon_id_t icon_id;
+
+  if (icon_id_from_str(argv[1], &icon_id) < 0) {
+    shell_error(sh, "Unknown icon.");
+    return -2;
+  }
+
+  draw_img(get_icon(icon_id));
+  return 0;
+}
+
 SHELL_CMD_REGISTER(servo, NULL, "Servos commands", cmd_servo_set_angle);
+SHELL_CMD_REGISTER(face, NULL, "OLED commands", cmd_oled_set_face);

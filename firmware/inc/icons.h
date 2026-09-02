@@ -23,6 +23,12 @@ typedef enum {
   ICON_COUNT
 } icon_id_t;
 
+struct icon_arg_map {
+  const char *arg;
+  icon_id_t id;
+};
+
 const uint8_t *get_icon(icon_id_t id);
+int icon_id_from_str(const char *str, icon_id_t *id);
 
 #endif // ICONS_H__

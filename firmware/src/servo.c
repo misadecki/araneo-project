@@ -1,20 +1,8 @@
 #include "servo.h"
-#include <zephyr/drivers/pwm.h>
 #include <zephyr/logging/log.h>
 #include <strings.h>
 
 LOG_MODULE_REGISTER(servo, LOG_LEVEL_INF);
-
-struct servo_config {
-  struct pwm_dt_spec pwm;
-  int32_t offset_deg;
-  int32_t current_angle;
-};
-
-struct servo_arg_map {
-  const char *arg;
-  servo_id_t id;
-};
 
 static struct servo_arg_map servo_args[] = {
   {"coxa_lf", SERVO_COXA_LEFT_FRONT},
