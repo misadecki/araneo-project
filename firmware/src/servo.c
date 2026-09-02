@@ -31,7 +31,7 @@ static struct servo_config servos[SERVO_COUNT] = {
   [SERVO_COXA_LEFT_BACK] = {
     .pwm = PWM_DT_SPEC_GET(DT_ALIAS(servolf)),
     .current_angle = 90,
-    .offset_deg = 0
+    .offset_deg = SERVO_COXA_LEFT_BACK_OFFSET
   },
 };
 
