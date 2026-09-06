@@ -1,5 +1,6 @@
 #include "button.h"
 #include "servo.h"
+#include "led.h"
 #include <zephyr/kernel.h>
 
 int main(void) {
@@ -10,6 +11,13 @@ int main(void) {
     return 2;
   }
 
-  k_sleep(K_FOREVER);
+  if (init_led() < 0) {
+    return 3;
+  }
+
+  while (1) {
+    toggle_led();
+    k_msleep(2000);
+  }
   return 0;
 }
