@@ -11,4 +11,6 @@ target_sources(app PRIVATE
   src/icons.c
   src/servo.c
   src/commands.c
+  src/button.c
+  src/display_manager.c
 )

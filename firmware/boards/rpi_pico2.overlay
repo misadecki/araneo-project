@@ -14,10 +14,19 @@
     max-pulse = <PWM_USEC(2000)>;
   };
 
+  buttons {
+    compatible = "gpio-keys";
+    button: button {
+      gpios = <&gpio0 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+      label = "Button";
+    };
+  };
+
   aliases {
     display0 = &oled;
     debugled = &debug_led;
     servolf = &servo_lf;
+    sw0 = &button;
   };
 
   chosen {
