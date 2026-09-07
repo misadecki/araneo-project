@@ -1,6 +1,7 @@
 #include "button.h"
 #include "servo.h"
 #include "led.h"
+#include "buck.h"
 #include <zephyr/kernel.h>
 
 int main(void) {
@@ -11,9 +12,15 @@ int main(void) {
     return 2;
   }
 
-  if (init_led() < 0) {
+  if (led_init() < 0) {
     return 3;
   }
+
+  if (buck_init() < 0) {
+    return 4;
+  }
+
+  buck_on();
 
   while (1) {
     toggle_led();

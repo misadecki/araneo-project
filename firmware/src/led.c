@@ -6,7 +6,7 @@ LOG_MODULE_REGISTER(led, LOG_LEVEL_INF);
 
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(DT_ALIAS(debugled), gpios);
 
-int init_led(void) {
+int led_init(void) {
   if (!gpio_is_ready_dt(&led)) {
     LOG_ERR("LED GPIO not ready.");
     return -ENODEV;

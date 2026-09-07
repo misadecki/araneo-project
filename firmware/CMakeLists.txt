@@ -14,4 +14,5 @@ target_sources(app PRIVATE
   src/button.c
   src/display_manager.c
   src/led.c
+  src/buck.c
 )
