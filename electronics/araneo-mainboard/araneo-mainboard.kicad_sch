@@ -11,6 +11,112 @@
 		(comment 1 "Michal Sadecki")
 	)
 	(lib_symbols)
+	(junction
+		(at 209.55 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75927622-3593-4955-bb45-af7735da75b3")
+	)
+	(bus
+		(pts
+			(xy 214.63 72.39) (xy 219.71 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e797d66-45b3-4bb3-a496-396dfd78d39d")
+	)
+	(wire
+		(pts
+			(xy 76.835 71.12) (xy 114.3 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2176bd40-02b0-4efb-ad11-e09e0a30ed70")
+	)
+	(bus
+		(pts
+			(xy 177.165 48.26) (xy 209.55 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3484ab3c-6b53-4c6a-bd0f-b817b2690a17")
+	)
+	(bus
+		(pts
+			(xy 177.165 118.11) (xy 219.71 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48d9f9da-cd73-435d-a513-63ab9f65c73b")
+	)
+	(bus
+		(pts
+			(xy 209.55 48.26) (xy 219.71 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5929be6d-8a73-4e1e-9568-ee6f73b50943")
+	)
+	(bus
+		(pts
+			(xy 214.63 72.39) (xy 212.09 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86e2b5ba-9914-485b-9980-bc46799a3dbf")
+	)
+	(bus
+		(pts
+			(xy 212.09 50.8) (xy 212.09 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f94a5c4-509a-4619-8a68-9c67d48a4e79")
+	)
+	(bus
+		(pts
+			(xy 177.165 96.52) (xy 219.71 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc34545b-452c-4af6-8b52-60fd6ad4130f")
+	)
+	(bus
+		(pts
+			(xy 212.09 50.8) (xy 209.55 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2233653-e577-4f0d-b93a-adbd95386d9b")
+	)
+	(wire
+		(pts
+			(xy 177.165 44.45) (xy 219.71 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c54dd771-f462-45e1-a384-bb7fb603749d")
+	)
 	(sheet
 		(at 219.71 88.9)
 		(size 26.035 15.24)
@@ -49,6 +155,16 @@
 				(justify left top)
 			)
 		)
+		(pin "SPEAKER{SPEAKER}" input
+			(at 219.71 96.52 180)
+			(uuid "7f8a7b74-23f2-43a1-b21a-5da9a01de4b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "araneo-mainboard"
 				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
@@ -58,8 +174,8 @@
 		)
 	)
 	(sheet
-		(at 116.205 38.735)
-		(size 68.58 117.475)
+		(at 114.3 40.005)
+		(size 62.865 117.475)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -74,7 +190,7 @@
 		)
 		(uuid "72e034f4-af39-4b4f-a873-83dbdb37c2f8")
 		(property "Sheetname" "MCU"
-			(at 116.205 38.0234 0)
+			(at 114.3 39.2934 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -85,7 +201,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 116.205 156.7946 0)
+			(at 114.3 158.0646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93,6 +209,56 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "I2C{I2C}" bidirectional
+			(at 177.165 48.26 0)
+			(uuid "ba519ae9-aeb0-43e4-8cba-0659e2bf4507")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IMU_INT1" input
+			(at 177.165 44.45 0)
+			(uuid "0b284728-2f6f-45a9-9d8e-8b9dc11784c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWM{PWM}" output
+			(at 177.165 118.11 0)
+			(uuid "5a32b7fb-a28b-4b1d-8807-859aa5e08271")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPEAKER{SPEAKER}" output
+			(at 177.165 96.52 0)
+			(uuid "11281b60-5625-44e1-905e-6a2d5e24e9f0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ENABLE" output
+			(at 114.3 71.12 180)
+			(uuid "91e17d83-5a45-4b41-a981-4acc089977e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -139,6 +305,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "I2C{I2C}" bidirectional
+			(at 219.71 48.26 180)
+			(uuid "245b9a10-e908-41bd-9c99-abe51cb7bce7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IMU_INT1" output
+			(at 219.71 44.45 180)
+			(uuid "59544115-260d-4dd2-aa36-bc7cc6a55c99")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -279,6 +465,16 @@
 				(justify left top)
 			)
 		)
+		(pin "I2C{I2C}" bidirectional
+			(at 219.71 72.39 180)
+			(uuid "6dace374-cb6e-4a1e-b4b4-978510678be7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "araneo-mainboard"
 				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
@@ -325,6 +521,16 @@
 				(justify left top)
 			)
 		)
+		(pin "ENABLE" input
+			(at 76.835 71.12 0)
+			(uuid "ccc44704-a4e1-412e-9adc-26f53c125aad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "araneo-mainboard"
 				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
@@ -369,6 +575,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "PWM{PWM}" input
+			(at 219.71 118.11 180)
+			(uuid "d6e871de-1e3e-47d0-b54b-3a71bcc4c5e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
