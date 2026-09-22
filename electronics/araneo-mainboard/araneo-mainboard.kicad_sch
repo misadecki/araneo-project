@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "f9fcb57c-0831-41d4-a374-fa7a29fb9e88")
 	(paper "A4")
+	(title_block
+		(title "Araneo Main Board")
+		(rev "1")
+		(company "KoNaR")
+		(comment 1 "Michal Sadecki")
+	)
 	(lib_symbols)
 	(sheet
 		(at 219.71 88.9)
@@ -98,52 +104,6 @@
 		)
 	)
 	(sheet
-		(at 46.99 67.945)
-		(size 29.845 17.78)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "7b00f89c-43fa-4ccb-be92-cb58ca2b1fbd")
-		(property "Sheetname" "Power"
-			(at 46.99 67.2334 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "power.kicad_sch"
-			(at 46.99 86.3096 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "araneo-mainboard"
-				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
-					(page "8")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 219.71 40.005)
 		(size 26.035 15.875)
 		(exclude_from_sim no)
@@ -185,6 +145,98 @@
 			(project "araneo-mainboard"
 				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 46.99 39.37)
+		(size 29.845 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "955d0e05-7aaa-4f45-8822-a7c91ddf7ad9")
+		(property "Sheetname" "Power"
+			(at 46.99 38.6584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 46.99 56.4646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 46.99 88.265)
+		(size 29.845 17.145)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9bd58684-5583-4200-a3fe-575f4f0cd0ac")
+		(property "Sheetname" "Power 5V"
+			(at 46.99 87.5534 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pico-power.kicad_sch"
+			(at 46.99 105.9946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
+					(page "8")
 				)
 			)
 		)
@@ -236,7 +288,7 @@
 		)
 	)
 	(sheet
-		(at 46.99 40.64)
+		(at 46.99 62.23)
 		(size 29.845 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -252,7 +304,7 @@
 		)
 		(uuid "cb582599-66fa-469e-b316-7512dfe9f934")
 		(property "Sheetname" "Power 6V"
-			(at 46.99 39.9284 0)
+			(at 46.99 61.5184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -263,7 +315,7 @@
 			)
 		)
 		(property "Sheetfile" "servo_power.kicad_sch"
-			(at 46.99 59.0046 0)
+			(at 46.99 80.5946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

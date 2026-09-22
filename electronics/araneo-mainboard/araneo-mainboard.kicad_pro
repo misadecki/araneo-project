@@ -264,7 +264,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -602,6 +602,10 @@
       {
         "netclass": "I2C",
         "pattern": "*I2C*"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*VBAT*"
       }
     ]
   },
@@ -772,7 +776,7 @@
         "uuid": "f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
       }
     ],
-    "used_designators": "R1-8,SW1-3,IC1-3,U1-3,D1-2,A1,C1-11,J1-9,PS1,#PWR1-43",
+    "used_designators": "LS1,#PWR1-102,PS1-2,J1-11,C1-44,A1,D1-6,U1-3,Q1-3,F1,IC1-3,SW1-3,R1-22,L1-2",
     "variants": []
   },
   "sheets": [
@@ -805,7 +809,11 @@
       "Power 6V"
     ],
     [
-      "7b00f89c-43fa-4ccb-be92-cb58ca2b1fbd",
+      "9bd58684-5583-4200-a3fe-575f4f0cd0ac",
+      "Power 5V"
+    ],
+    [
+      "955d0e05-7aaa-4f45-8822-a7c91ddf7ad9",
       "Power"
     ]
   ],
