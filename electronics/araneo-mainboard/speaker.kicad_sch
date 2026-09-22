@@ -3068,7 +3068,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 184.4548 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3150,7 +3150,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 228.2952 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -3230,7 +3230,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 60.96 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -3675,7 +3675,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 138.43 79.0448 0)
 			(hide yes)
 			(show_name no)
@@ -3757,7 +3757,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 213.0552 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3914,7 +3914,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 119.38 73.9648 0)
 			(hide yes)
 			(show_name no)
@@ -3994,7 +3994,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 204.47 81.788 90)
 			(hide yes)
 			(show_name no)
@@ -4416,7 +4416,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 123.19 95.5548 0)
 			(hide yes)
 			(show_name no)
@@ -4574,7 +4574,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 196.85 79.248 90)
 			(hide yes)
 			(show_name no)
@@ -4921,7 +4921,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_SparkFun-Connector:ScrewTerminal_1x02_P3.5mm_Blue"
 			(at 242.57 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -5690,7 +5690,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 78.74 115.2652 0)
 			(hide yes)
 			(show_name no)
@@ -5848,7 +5848,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 125.73 76.708 90)
 			(hide yes)
 			(show_name no)
@@ -6505,7 +6505,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 175.5648 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6929,7 +6929,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 29.5148 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -7132,7 +7132,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 81.28 59.9948 0)
 			(hide yes)
 			(show_name no)
@@ -7211,7 +7211,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 65.0748 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7325,31 +7325,31 @@
 			)
 		)
 		(pin "8"
-			(uuid "4e10a248-882b-4354-ba96-e09f111a41b9")
+			(uuid "4e10a248-882b-4354-ba96-e09f111a41ba")
 		)
 		(pin "9"
-			(uuid "d318fe5d-7838-4e26-a86f-3d930420c589")
+			(uuid "d318fe5d-7838-4e26-a86f-3d930420c58a")
 		)
 		(pin "2"
-			(uuid "b7904a36-1967-4950-8d39-29895fa29f95")
+			(uuid "b7904a36-1967-4950-8d39-29895fa29f96")
 		)
 		(pin "1"
-			(uuid "d0b5f6f7-7594-49c4-bafc-ebe2d5816821")
+			(uuid "d0b5f6f7-7594-49c4-bafc-ebe2d5816822")
 		)
 		(pin "3"
-			(uuid "f6aa6a52-1cae-4aa9-9f53-ab1788d000b9")
+			(uuid "f6aa6a52-1cae-4aa9-9f53-ab1788d000ba")
 		)
 		(pin "4"
-			(uuid "07087ec7-c040-4c0f-bdff-6801992aa65f")
+			(uuid "07087ec7-c040-4c0f-bdff-6801992aa660")
 		)
 		(pin "7"
-			(uuid "d57e1b8b-0cc3-4bfa-b954-6a86d48b29f6")
+			(uuid "d57e1b8b-0cc3-4bfa-b954-6a86d48b29f7")
 		)
 		(pin "6"
-			(uuid "d1d76bf7-f458-41d4-848e-4885fd53a465")
+			(uuid "d1d76bf7-f458-41d4-848e-4885fd53a466")
 		)
 		(pin "5"
-			(uuid "17e70b8e-6c84-43d4-8661-741cefd0734e")
+			(uuid "17e70b8e-6c84-43d4-8661-741cefd0734f")
 		)
 		(instances
 			(project "araneo-mainboard"
@@ -7391,7 +7391,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 154.94 63.1952 0)
 			(hide yes)
 			(show_name no)

@@ -2002,7 +2002,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 179.07 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -2087,7 +2087,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 179.07 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -2484,7 +2484,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 108.9152 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -2644,7 +2644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 179.07 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2729,7 +2729,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 127 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -2814,7 +2814,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 160.9852 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -2974,7 +2974,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 160.9852 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -3056,7 +3056,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 160.9852 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3138,7 +3138,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 108.9152 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3298,7 +3298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 127 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -3383,7 +3383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 127 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4092,7 +4092,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 108.9152 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -4330,7 +4330,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 179.07 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4649,7 +4649,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 108.9152 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -4809,7 +4809,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 160.9852 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -5047,7 +5047,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 127 140.97 0)
 			(hide yes)
 			(show_name no)

@@ -1759,7 +1759,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 165.4048 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2150,7 +2150,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 171.45 95.758 90)
 			(hide yes)
 			(show_name no)
@@ -2419,7 +2419,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "BMI270"
+		(property "Footprint" "Custom:BMI270"
 			(at 148.59 173.66 0)
 			(hide yes)
 			(show_name no)
@@ -2751,7 +2751,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 133.35 117.1448 0)
 			(hide yes)
 			(show_name no)
@@ -2830,7 +2830,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 155.2448 93.98 0)
 			(hide yes)
 			(show_name no)

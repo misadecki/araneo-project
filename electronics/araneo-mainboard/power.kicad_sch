@@ -5246,7 +5246,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_NKK_GW12LJP"
+		(property "Footprint" "PCM_SparkFun-Connector:ScrewTerminal_1x02_P3.5mm_Blue"
 			(at 146.05 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -5671,7 +5671,7 @@
 				)
 			)
 		)
-		(property "Footprint" "HSU0139:HSU0139"
+		(property "Footprint" "Custom:HSU0139"
 			(at 123.825 59.69 0)
 			(hide yes)
 			(show_name no)

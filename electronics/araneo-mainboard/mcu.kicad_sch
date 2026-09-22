@@ -5109,7 +5109,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 70.8152 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5502,7 +5502,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 23.8252 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -6355,7 +6355,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:Nidec_Copal_CAS-120A"
+		(property "Footprint" "PCM_SparkFun-Connector:ScrewTerminal_1x02_P3.5mm_Blue"
 			(at 33.02 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -7323,7 +7323,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 268.9352 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8282,7 +8282,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric"
+		(property "Footprint" "PCM_JLCPCB:D_0603"
 			(at 34.29 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -8449,7 +8449,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:D_0603"
 			(at 134.62 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -8919,7 +8919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 26.67 70.358 90)
 			(hide yes)
 			(show_name no)

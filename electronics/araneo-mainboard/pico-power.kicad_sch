@@ -1991,7 +1991,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 197.8152 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -2071,7 +2071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT95P280X110-6N"
+		(property "Footprint" "Custom:SOT95P280X110-6N"
 			(at 156.21 148.26 0)
 			(hide yes)
 			(show_name no)
@@ -2761,7 +2761,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 84.7852 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -2843,7 +2843,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 106.3752 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3001,7 +3001,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 172.72 52.3748 0)
 			(hide yes)
 			(show_name no)
@@ -3160,7 +3160,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 185.1152 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3397,7 +3397,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 225.0948 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3477,7 +3477,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Custom:PA4302103NLT"
 			(at 179.07 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -3559,7 +3559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 94.9452 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3718,7 +3718,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 188.2648 49.53 0)
 			(hide yes)
 			(show_name no)

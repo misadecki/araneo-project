@@ -2529,7 +2529,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 103.8352 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -2610,7 +2610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 72.0852 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -2689,7 +2689,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 171.45 67.6148 0)
 			(hide yes)
 			(show_name no)
@@ -3037,7 +3037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0402"
 			(at 113.9952 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -3430,7 +3430,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 102.5652 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -3590,7 +3590,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric"
+		(property "Footprint" "Custom:INDPM112100X400N"
 			(at 110.49 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3828,7 +3828,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 93.6752 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4143,7 +4143,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 82.2452 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -4379,7 +4379,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT50P160X60-6N"
+		(property "Footprint" "Custom:SOT50P160X60-6N"
 			(at 140.97 157.15 0)
 			(hide yes)
 			(show_name no)
@@ -4802,7 +4802,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 173.99 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -4883,7 +4883,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric"
+		(property "Footprint" "PCM_JLCPCB:D_0603"
 			(at 171.45 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -5398,7 +5398,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0805"
 			(at 92.4052 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -5795,7 +5795,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "PCM_JLCPCB:C_0603"
 			(at 83.5152 69.85 0)
 			(hide yes)
 			(show_name no)
