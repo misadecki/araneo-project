@@ -3308,14 +3308,15 @@
 				)
 			)
 		)
-		(property "Value" "VBAT"
-			(at 80.01 52.07 0)
+		(property "Value" "VBAT_FUSED"
+			(at 82.55 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
