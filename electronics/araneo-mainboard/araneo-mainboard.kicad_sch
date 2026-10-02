@@ -29,7 +29,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.835 71.12) (xy 114.3 71.12)
+			(xy 76.835 71.12) (xy 115.57 71.12)
 		)
 		(stroke
 			(width 0)
@@ -39,7 +39,7 @@
 	)
 	(bus
 		(pts
-			(xy 177.165 48.26) (xy 209.55 48.26)
+			(xy 178.435 48.26) (xy 209.55 48.26)
 		)
 		(stroke
 			(width 0)
@@ -49,7 +49,7 @@
 	)
 	(bus
 		(pts
-			(xy 177.165 118.11) (xy 219.71 118.11)
+			(xy 178.435 118.11) (xy 219.71 118.11)
 		)
 		(stroke
 			(width 0)
@@ -89,7 +89,7 @@
 	)
 	(bus
 		(pts
-			(xy 177.165 96.52) (xy 219.71 96.52)
+			(xy 178.435 96.52) (xy 219.71 96.52)
 		)
 		(stroke
 			(width 0)
@@ -109,13 +109,23 @@
 	)
 	(wire
 		(pts
-			(xy 177.165 44.45) (xy 219.71 44.45)
+			(xy 178.435 44.45) (xy 219.71 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c54dd771-f462-45e1-a384-bb7fb603749d")
+	)
+	(bus
+		(pts
+			(xy 178.435 139.7) (xy 219.71 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6e3da01-6fb1-4213-856a-f5a5d27f86df")
 	)
 	(sheet
 		(at 219.71 88.9)
@@ -174,7 +184,7 @@
 		)
 	)
 	(sheet
-		(at 114.3 40.005)
+		(at 115.57 40.005)
 		(size 62.865 117.475)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -190,7 +200,7 @@
 		)
 		(uuid "72e034f4-af39-4b4f-a873-83dbdb37c2f8")
 		(property "Sheetname" "MCU"
-			(at 114.3 39.2934 0)
+			(at 115.57 39.2934 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -201,7 +211,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 114.3 158.0646 0)
+			(at 115.57 158.0646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -211,8 +221,8 @@
 				(justify left top)
 			)
 		)
-		(pin "I2C{I2C}" bidirectional
-			(at 177.165 48.26 0)
+		(pin "I2C1{I2C}" bidirectional
+			(at 178.435 48.26 0)
 			(uuid "ba519ae9-aeb0-43e4-8cba-0659e2bf4507")
 			(effects
 				(font
@@ -222,7 +232,7 @@
 			)
 		)
 		(pin "IMU_INT1" input
-			(at 177.165 44.45 0)
+			(at 178.435 44.45 0)
 			(uuid "0b284728-2f6f-45a9-9d8e-8b9dc11784c8")
 			(effects
 				(font
@@ -232,7 +242,7 @@
 			)
 		)
 		(pin "PWM{PWM}" output
-			(at 177.165 118.11 0)
+			(at 178.435 118.11 0)
 			(uuid "5a32b7fb-a28b-4b1d-8807-859aa5e08271")
 			(effects
 				(font
@@ -242,7 +252,7 @@
 			)
 		)
 		(pin "SPEAKER{SPEAKER}" output
-			(at 177.165 96.52 0)
+			(at 178.435 96.52 0)
 			(uuid "11281b60-5625-44e1-905e-6a2d5e24e9f0")
 			(effects
 				(font
@@ -252,13 +262,23 @@
 			)
 		)
 		(pin "ENABLE" output
-			(at 114.3 71.12 180)
+			(at 115.57 71.12 180)
 			(uuid "91e17d83-5a45-4b41-a981-4acc089977e7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "I2C0{I2C}" bidirectional
+			(at 178.435 139.7 0)
+			(uuid "deaf5b08-048e-4b10-aaf8-ecf2e23b1e4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -307,7 +327,7 @@
 				(justify left top)
 			)
 		)
-		(pin "I2C{I2C}" bidirectional
+		(pin "I2C1{I2C}" bidirectional
 			(at 219.71 48.26 180)
 			(uuid "245b9a10-e908-41bd-9c99-abe51cb7bce7")
 			(effects
@@ -331,6 +351,62 @@
 			(project "araneo-mainboard"
 				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 132.08)
+		(size 26.035 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8adc064e-ae63-499a-999b-0b99fa0c3c2e")
+		(property "Sheetname" "OLED"
+			(at 219.71 131.3684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "oled.kicad_sch"
+			(at 219.71 146.6346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "I2C0{I2C}" bidirectional
+			(at 219.71 139.7 180)
+			(uuid "7c8e2617-b911-42e6-adf6-3dd328cb3a47")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "araneo-mainboard"
+				(path "/f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
+					(page "10")
 				)
 			)
 		)
@@ -465,7 +541,7 @@
 				(justify left top)
 			)
 		)
-		(pin "I2C{I2C}" bidirectional
+		(pin "I2C1{I2C}" bidirectional
 			(at 219.71 72.39 180)
 			(uuid "6dace374-cb6e-4a1e-b4b4-978510678be7")
 			(effects

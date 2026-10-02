@@ -1241,7 +1241,7 @@
 		)
 		(uuid "f02ee865-1456-4cf3-896c-ad9099a04a95")
 	)
-	(label "I2C.SCL"
+	(label "I2C1.SCL"
 		(at 143.51 59.69 270)
 		(effects
 			(font
@@ -1261,7 +1261,7 @@
 		)
 		(uuid "43efefbd-0b46-4336-89fa-ab76fe62abb1")
 	)
-	(label "I2C.SCL"
+	(label "I2C1.SCL"
 		(at 212.09 59.69 180)
 		(effects
 			(font
@@ -1271,7 +1271,7 @@
 		)
 		(uuid "aab330ef-1f37-4429-b937-4a78ff8111e4")
 	)
-	(label "I2C.SDA"
+	(label "I2C1.SDA"
 		(at 171.45 92.71 180)
 		(effects
 			(font
@@ -1281,7 +1281,7 @@
 		)
 		(uuid "c87163c6-4fd0-4a28-885a-f6ba1becab03")
 	)
-	(label "I2C.SDA"
+	(label "I2C1.SDA"
 		(at 212.09 57.15 180)
 		(effects
 			(font
@@ -1291,7 +1291,7 @@
 		)
 		(uuid "cf21f1bc-512d-4ff4-89c6-6b003f3790a4")
 	)
-	(hierarchical_label "I2C{I2C}"
+	(hierarchical_label "I2C1{I2C}"
 		(shape bidirectional)
 		(at 196.85 64.77 180)
 		(effects
