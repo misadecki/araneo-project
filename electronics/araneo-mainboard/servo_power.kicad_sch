@@ -2485,6 +2485,16 @@
 		)
 		(uuid "9278465f-a7a0-4e98-be13-c42a866ff7ad")
 	)
+	(label "SW"
+		(at 110.49 74.93 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7b877ec-faae-40cc-ada5-7dc2a22f9324")
+	)
 	(hierarchical_label "ENABLE"
 		(shape input)
 		(at 146.05 64.77 0)
