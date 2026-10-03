@@ -5216,7 +5216,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6187,7 +6187,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2kΩ"
+		(property "Value" "4.7kΩ"
 			(at 234.95 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -6516,7 +6516,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7209,7 +7209,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7714,7 +7714,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -8008,7 +8008,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2kΩ"
+		(property "Value" "4.7kΩ"
 			(at 233.68 129.54 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -8353,7 +8353,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2kΩ"
+		(property "Value" "4.7kΩ"
 			(at 238.76 106.68 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -9216,7 +9216,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -10058,7 +10058,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2kΩ"
+		(property "Value" "4.7kΩ"
 			(at 237.49 132.08 90)
 			(show_name no)
 			(do_not_autoplace yes)
