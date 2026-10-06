@@ -403,29 +403,27 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 5.08 0)
+			(property "Reference" "U2"
+				(at 2.54 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "MCP6002-xMC"
-				(at 0 -5.08 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+			(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -656,25 +654,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(hide yes)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -971,6 +950,546 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MCP6002-xMC_1"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U2"
+				(at 2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MCP6002-xMC"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_1_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_1_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_1_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MCP6002-xMC_2"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U2"
+				(at 2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MCP6002-xMC"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_2_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_2_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MCP6002-xMC_2_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1767,6 +2286,12 @@
 		(uuid "697cec9f-06e1-4b89-9e95-33314e198aa0")
 	)
 	(junction
+		(at 36.83 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e05bbb2-5387-4f74-9d7e-a536c0c8b150")
+	)
+	(junction
 		(at 30.48 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1807,12 +2332,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3c168bb-8637-4451-be10-a606fff5bc58")
-	)
-	(junction
-		(at 35.56 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cae32f97-a708-4726-b208-0211ad423415")
 	)
 	(junction
 		(at 22.86 87.63)
@@ -1868,16 +2387,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 80.01) (xy 130.81 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "034fc128-2f17-42e5-a1b4-fb983e068a22")
-	)
-	(wire
-		(pts
 			(xy 166.37 101.6) (xy 165.1 102.87)
 		)
 		(stroke
@@ -1918,13 +2427,23 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 62.23) (xy 154.94 62.23)
+			(xy 127 80.01) (xy 130.81 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0df21939-5d1e-41b2-8415-64da18868447")
+		(uuid "10099ec6-9988-4eed-976a-de6bdc0eba65")
+	)
+	(wire
+		(pts
+			(xy 152.4 62.23) (xy 152.4 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14120a86-5f7c-4652-bd43-87210c3000de")
 	)
 	(wire
 		(pts
@@ -1935,16 +2454,6 @@
 			(type default)
 		)
 		(uuid "1a66476f-28bd-4e57-aa1b-603f469c9249")
-	)
-	(wire
-		(pts
-			(xy 58.42 97.79) (xy 58.42 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a6a4a52-df53-4a9a-a835-fa5693fbe49f")
 	)
 	(wire
 		(pts
@@ -1978,16 +2487,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 106.68) (xy 72.39 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "287adfc9-c6b5-46ed-87ff-c9983022d448")
-	)
-	(wire
-		(pts
 			(xy 86.36 60.96) (xy 86.36 74.93)
 		)
 		(stroke
@@ -2018,16 +2517,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 91.44) (xy 35.56 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fecedc5-8c79-408a-8ab4-31081eac9e3e")
-	)
-	(wire
-		(pts
 			(xy 64.77 72.39) (xy 67.31 72.39)
 		)
 		(stroke
@@ -2048,6 +2537,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 85.09) (xy 133.35 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32b53824-f147-4f15-890d-49389c4a3004")
+	)
+	(wire
+		(pts
 			(xy 181.61 52.07) (xy 185.42 52.07)
 		)
 		(stroke
@@ -2055,16 +2554,6 @@
 			(type default)
 		)
 		(uuid "32c92124-b63c-436c-80d0-8c38a740c304")
-	)
-	(wire
-		(pts
-			(xy 152.4 63.5) (xy 152.4 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "346b740d-bfd6-4e29-9d32-307323075770")
 	)
 	(wire
 		(pts
@@ -2088,17 +2577,27 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 95.25) (xy 40.64 95.25)
+			(xy 58.42 77.47) (xy 66.04 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "399b5196-0e07-4d8c-84cb-00f3fe013c6f")
+		(uuid "38e4e96a-79ff-48f7-abdb-e96735a247c6")
 	)
 	(wire
 		(pts
-			(xy 123.19 96.52) (xy 128.27 96.52)
+			(xy 36.83 95.25) (xy 43.18 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ab57c8c-f1ba-4532-825b-c7ca57906d14")
+	)
+	(wire
+		(pts
+			(xy 123.19 96.52) (xy 133.35 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2108,17 +2607,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 114.3) (xy 76.2 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c950590-8bab-487e-98f8-0e54b4f0bb48")
-	)
-	(wire
-		(pts
-			(xy 71.12 105.41) (xy 71.12 106.68)
+			(xy 71.12 105.41) (xy 71.12 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2135,26 +2624,6 @@
 			(type default)
 		)
 		(uuid "3df99daf-74c5-4b81-a003-c89c8a6d8061")
-	)
-	(wire
-		(pts
-			(xy 139.7 85.09) (xy 128.27 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3e8eafef-0ca3-4da0-85c6-d15bb3e6efba")
-	)
-	(wire
-		(pts
-			(xy 152.4 63.5) (xy 153.67 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4387b40f-a059-4cb8-aa64-79e832874e60")
 	)
 	(wire
 		(pts
@@ -2188,26 +2657,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 105.41) (xy 58.42 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ae52af1-ccdb-496a-9d7f-3704037fffcd")
-	)
-	(wire
-		(pts
-			(xy 114.3 96.52) (xy 115.57 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51df429a-3db1-4f2c-9767-572c6f8a72d9")
-	)
-	(wire
-		(pts
 			(xy 212.09 87.63) (xy 212.09 88.9)
 		)
 		(stroke
@@ -2218,23 +2667,13 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 114.3) (xy 74.93 113.03)
+			(xy 43.18 105.41) (xy 58.42 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5b45243f-4d97-43dc-8fce-f6c583afa074")
-	)
-	(wire
-		(pts
-			(xy 127 81.28) (xy 128.27 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5bd71789-dcb9-43a7-8677-edcc4ccf0bb3")
+		(uuid "595a0d31-36c2-44f0-9b12-94198510a881")
 	)
 	(wire
 		(pts
@@ -2258,23 +2697,13 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 109.22) (xy 92.71 110.49)
+			(xy 92.71 107.95) (xy 92.71 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6635c74b-2f46-49e5-80d1-55fd7dcc6e54")
-	)
-	(wire
-		(pts
-			(xy 57.15 78.74) (xy 57.15 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69508476-7e5b-49cb-bc04-3e53a34fedbc")
 	)
 	(wire
 		(pts
@@ -2308,16 +2737,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 105.41) (xy 57.15 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ad52a9d-2f90-489b-a0f3-7bb5e7344b52")
-	)
-	(wire
-		(pts
 			(xy 227.33 77.47) (xy 246.38 77.47)
 		)
 		(stroke
@@ -2338,7 +2757,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 109.22) (xy 90.17 107.95)
+			(xy 90.17 107.95) (xy 90.17 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2368,6 +2787,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 107.95) (xy 74.93 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8edd998c-26d4-4930-bd00-e44abc96b6f6")
+	)
+	(wire
+		(pts
 			(xy 81.28 49.53) (xy 86.36 49.53)
 		)
 		(stroke
@@ -2378,7 +2807,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 107.95) (xy 91.44 107.95)
+			(xy 90.17 107.95) (xy 92.71 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2398,16 +2827,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 93.98) (xy 39.37 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96441201-47a9-42e5-849b-86c3efe837c2")
-	)
-	(wire
-		(pts
 			(xy 176.53 59.69) (xy 176.53 60.96)
 		)
 		(stroke
@@ -2418,17 +2837,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 102.87) (xy 45.72 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97139540-3c67-4067-bec3-09b863e28028")
-	)
-	(wire
-		(pts
-			(xy 86.36 114.3) (xy 87.63 114.3)
+			(xy 86.36 114.3) (xy 90.17 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2448,13 +2857,23 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 78.74) (xy 58.42 77.47)
+			(xy 133.35 85.09) (xy 153.67 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a6484534-2b6a-4116-86b1-6a4a7b8975e8")
+		(uuid "9b88a210-8366-4147-a746-fea9efe4e31a")
+	)
+	(wire
+		(pts
+			(xy 74.93 107.95) (xy 74.93 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1ec8345-76f6-4c71-aa25-2ab74cc2a0ac")
 	)
 	(wire
 		(pts
@@ -2478,16 +2897,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 95.25) (xy 114.3 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af9b9887-6733-4535-9ecb-c8aecc6e844c")
-	)
-	(wire
-		(pts
 			(xy 227.33 77.47) (xy 200.66 77.47)
 		)
 		(stroke
@@ -2495,6 +2904,26 @@
 			(type default)
 		)
 		(uuid "b23e73ff-fec6-47d9-9aec-4a575377e070")
+	)
+	(wire
+		(pts
+			(xy 36.83 86.36) (xy 36.83 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b692df7c-9427-494b-b704-304afe106b2a")
+	)
+	(wire
+		(pts
+			(xy 113.03 96.52) (xy 115.57 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6f8ed26-58b0-4c44-98bd-81b43993aba8")
 	)
 	(wire
 		(pts
@@ -2508,16 +2937,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 85.09) (xy 153.67 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be165f74-698f-482c-8a35-4fe4dbc01b52")
-	)
-	(wire
-		(pts
 			(xy 165.1 102.87) (xy 163.83 101.6)
 		)
 		(stroke
@@ -2525,46 +2944,6 @@
 			(type default)
 		)
 		(uuid "bf2913dd-8663-4e9a-ab0f-fa87b5543b53")
-	)
-	(wire
-		(pts
-			(xy 36.83 86.36) (xy 35.56 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf4eda8b-26de-4b55-b877-6aa0c31249b2")
-	)
-	(wire
-		(pts
-			(xy 58.42 85.09) (xy 57.15 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c246b305-baf9-4e6e-96d2-f3337e778fb5")
-	)
-	(wire
-		(pts
-			(xy 40.64 95.25) (xy 39.37 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c46be726-0d18-4fc0-a5bc-55349be61286")
-	)
-	(wire
-		(pts
-			(xy 91.44 107.95) (xy 92.71 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c59ca52f-66db-4356-b2bb-4fd2b4b320a2")
 	)
 	(wire
 		(pts
@@ -2598,23 +2977,13 @@
 	)
 	(wire
 		(pts
-			(xy 127 81.28) (xy 127 82.55)
+			(xy 127 80.01) (xy 127 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ccbccb9e-93a9-4db6-b136-132d61f422f0")
-	)
-	(wire
-		(pts
-			(xy 72.39 107.95) (xy 74.93 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0238521-a36e-4561-a641-aaa06d55840c")
 	)
 	(wire
 		(pts
@@ -2628,17 +2997,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 109.22) (xy 88.9 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d12b67a3-3989-4fb6-8b11-741e7aa1bd3f")
-	)
-	(wire
-		(pts
-			(xy 35.56 87.63) (xy 30.48 87.63)
+			(xy 30.48 87.63) (xy 36.83 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2648,13 +3007,33 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 100.33) (xy 43.18 102.87)
+			(xy 58.42 97.79) (xy 58.42 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "de936c72-c562-47e1-892a-704cb9967000")
+		(uuid "da4f2ad9-a4b7-46f0-b3e2-a841228d6e3a")
+	)
+	(wire
+		(pts
+			(xy 152.4 62.23) (xy 154.94 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1c268d-402d-4f15-bfe4-077a5eb43c05")
+	)
+	(wire
+		(pts
+			(xy 36.83 87.63) (xy 36.83 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "decdd033-9a9d-44d4-b1e2-bc6dfae5f20f")
 	)
 	(wire
 		(pts
@@ -2708,16 +3087,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 77.47) (xy 66.04 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec1ec128-49ba-4abf-95ef-fbb48d6f3812")
-	)
-	(wire
-		(pts
 			(xy 85.09 74.93) (xy 86.36 74.93)
 		)
 		(stroke
@@ -2738,7 +3107,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 93.98) (xy 113.03 95.25)
+			(xy 113.03 93.98) (xy 113.03 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2778,7 +3147,17 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 97.79) (xy 58.42 85.09)
+			(xy 43.18 100.33) (xy 43.18 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5a33941-e5c8-4c21-9e8b-a62bba0366c8")
+	)
+	(wire
+		(pts
+			(xy 58.42 77.47) (xy 58.42 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2798,23 +3177,13 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 114.3) (xy 88.9 113.03)
+			(xy 74.93 114.3) (xy 78.74 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f75bae2d-b19d-4db7-a14c-1d63b3a81071")
-	)
-	(wire
-		(pts
-			(xy 74.93 107.95) (xy 74.93 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa40a8cd-ff72-4b5d-9778-46260ca66b73")
+		(uuid "fe7e9c0d-f57e-473e-b651-f83ca8e6f8fd")
 	)
 	(bus
 		(pts
@@ -2927,7 +3296,7 @@
 		(uuid "8037d6e2-8690-4dde-8090-4a33e707b558")
 	)
 	(label "VREF_BUF"
-		(at 57.15 83.82 90)
+		(at 58.42 83.82 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3516,6 +3885,7 @@
 		)
 	)
 	(symbol
+		(lib_name "MCP6002-xMC_1")
 		(lib_id "Amplifier_Operational:MCP6002-xMC")
 		(at 50.8 97.79 0)
 		(unit 2)
@@ -3525,10 +3895,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "22a0f2a3-45be-47da-9726-fefcb55016d0")
 		(property "Reference" "U2"
-			(at 50.8 87.63 0)
+			(at 52.07 92.202 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3538,7 +3907,7 @@
 			)
 		)
 		(property "Value" "MCP6002-xMC"
-			(at 50.8 90.17 0)
+			(at 49.53 89.408 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3547,7 +3916,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
 			(at 50.8 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3582,9 +3951,6 @@
 		)
 		(pin "8"
 			(uuid "4e10a248-882b-4354-ba96-e09f111a41b9")
-		)
-		(pin "9"
-			(uuid "d318fe5d-7838-4e26-a86f-3d930420c589")
 		)
 		(pin "2"
 			(uuid "b7904a36-1967-4950-8d39-29895fa29f95")
@@ -6713,7 +7079,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0402"
+		(property "Footprint" "PCM_JLCPCB:R_0603"
 			(at 77.47 51.308 90)
 			(hide yes)
 			(show_name no)
@@ -7608,7 +7974,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
 			(at 82.55 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -7643,9 +8009,6 @@
 		)
 		(pin "8"
 			(uuid "4e10a248-882b-4354-ba96-e09f111a41ba")
-		)
-		(pin "9"
-			(uuid "d318fe5d-7838-4e26-a86f-3d930420c58a")
 		)
 		(pin "2"
 			(uuid "b7904a36-1967-4950-8d39-29895fa29f96")
@@ -7835,6 +8198,7 @@
 		)
 	)
 	(symbol
+		(lib_name "MCP6002-xMC_2")
 		(lib_id "Amplifier_Operational:MCP6002-xMC")
 		(at 77.47 74.93 0)
 		(mirror x)
@@ -7847,7 +8211,7 @@
 		(dnp no)
 		(uuid "f60048b9-1258-4485-86bf-06dbeb83066e")
 		(property "Reference" "U2"
-			(at 77.47 85.09 0)
+			(at 79.756 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7857,7 +8221,7 @@
 			)
 		)
 		(property "Value" "MCP6002-xMC"
-			(at 77.47 82.55 0)
+			(at 77.978 66.548 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7866,7 +8230,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "PCM_JLCPCB:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
 			(at 77.47 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7919,9 +8283,6 @@
 		)
 		(pin "8"
 			(uuid "fbb59e3e-5bc1-4d3c-acfc-1c638cbcef1f")
-		)
-		(pin "9"
-			(uuid "392ecfe3-1c64-460e-a812-c5d5d64e82b2")
 		)
 		(pin "7"
 			(uuid "a1bdd2ec-d01b-4adc-aaf2-0470ee5ab0e2")

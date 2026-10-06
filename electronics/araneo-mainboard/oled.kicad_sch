@@ -652,16 +652,6 @@
 		)
 		(uuid "f2ec98d3-0d2c-4e2d-99e5-70bb440d0563")
 	)
-	(wire
-		(pts
-			(xy 160.02 73.66) (xy 158.75 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00e5521f-a882-42d1-adcd-074100bab84e")
-	)
 	(bus
 		(pts
 			(xy 190.5 67.31) (xy 190.5 71.12)
@@ -674,23 +664,23 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 74.93) (xy 158.75 74.93)
+			(xy 153.67 72.39) (xy 153.67 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ebe603e-462e-437c-b66a-bf884d8c572e")
+	)
+	(wire
+		(pts
+			(xy 146.05 74.93) (xy 160.02 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "516926ad-364f-42b9-b8a4-06002e0bbd8a")
-	)
-	(wire
-		(pts
-			(xy 153.67 73.66) (xy 152.4 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58f25bdf-43f9-4b42-8315-b4fb1e49b344")
 	)
 	(wire
 		(pts
@@ -704,7 +694,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 73.66) (xy 170.18 74.93)
+			(xy 170.18 72.39) (xy 170.18 74.93)
 		)
 		(stroke
 			(width 0)
@@ -724,7 +714,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 72.39) (xy 152.4 72.39)
+			(xy 146.05 72.39) (xy 153.67 72.39)
 		)
 		(stroke
 			(width 0)
@@ -741,16 +731,6 @@
 			(type default)
 		)
 		(uuid "a3e834d0-faea-4eda-a906-1188c88e5eb2")
-	)
-	(wire
-		(pts
-			(xy 170.18 73.66) (xy 168.91 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d90be61c-5ecb-4235-846e-cd4935386fa9")
 	)
 	(wire
 		(pts
@@ -774,7 +754,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 72.39) (xy 160.02 73.66)
+			(xy 160.02 72.39) (xy 160.02 74.93)
 		)
 		(stroke
 			(width 0)
@@ -784,7 +764,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 72.39) (xy 168.91 72.39)
+			(xy 167.64 72.39) (xy 170.18 72.39)
 		)
 		(stroke
 			(width 0)
@@ -1110,7 +1090,7 @@
 	)
 	(symbol
 		(lib_id "PCM_SparkFun-PowerSymbol:GND")
-		(at 153.67 73.66 0)
+		(at 153.67 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1121,7 +1101,7 @@
 		(fields_autoplaced yes)
 		(uuid "86e8178a-a218-4be6-b5cd-92001e9a36b3")
 		(property "Reference" "#PWR0112"
-			(at 153.67 80.01 0)
+			(at 153.67 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1132,7 +1112,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 153.67 77.47 0)
+			(at 153.67 81.28 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -1142,7 +1122,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 153.67 73.66 0)
+			(at 153.67 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1153,7 +1133,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 73.66 0)
+			(at 153.67 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1164,7 +1144,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 153.67 82.55 0)
+			(at 153.67 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
