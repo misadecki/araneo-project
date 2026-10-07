@@ -76,20 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "lib_footprint_mismatch|112040000|71500000|930e7f92-2e3e-4ae3-83d1-0e9b88e8d2c9|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|157500000|76750000|a3231738-449f-438f-b079-604eff494af9|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|169300000|107600000|8babe332-b321-4df9-b92d-98d733e27599|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -987,7 +974,7 @@
         "uuid": "f9fcb57c-0831-41d4-a374-fa7a29fb9e88"
       }
     ],
-    "used_designators": "SW1-3,R1-31,L1-2,PS1-2,LS1,#PWR1-115,J1-12,A1,C1-50,Q1-4,F1,D1-6,U1-3,IC1-3",
+    "used_designators": "Q1-4,F1,IC1-3,SW1-3,R1-31,L1-2,PS1-2,LS1,#PWR1-115,J1-12,A1,C1-50,U1-3,D1-6",
     "variants": []
   },
   "sheets": [
