@@ -217,6 +217,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "731f9851-2597-46f9-92ac-9f39050ee1dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9bd58684-5583-4200-a3fe-575f4f0cd0ac/c3b2a6b6-bfcd-4bf6-aab9-ffd838bf5ef8")
 		(sheetname "/Power 5V/")
@@ -413,7 +424,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 1.38 1.27)
@@ -1586,7 +1597,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.1 -4.4)
@@ -2077,7 +2088,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.75 3.6)
@@ -2542,7 +2553,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25862"
+		(property "LCSC" "C4184"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3331,7 +3342,7 @@
 				(pins "1" "2" "3" "4" "5")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -4150,6 +4161,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6c511bef-4c68-4006-99ab-cfc8da2eb111")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/7f52b8c9-9092-4901-8142-0e3c82e86a92/fe20ca39-1a1e-40b7-ae0f-c95a9b5f8824")
 		(sheetname "/IMU/")
@@ -4337,6 +4359,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ce9e67c7-e26e-4bde-9837-7f0e549fb949")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -5413,6 +5446,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7001b456-06c7-4db8-8e14-a773a947878e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9bd58684-5583-4200-a3fe-575f4f0cd0ac/78fbfedd-9c20-42cf-96b1-e9648db67337")
 		(sheetname "/Power 5V/")
@@ -5613,7 +5657,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.36 -1.01)
@@ -5884,6 +5928,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a91e97f0-b77e-4842-96ac-f2997c3e77f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/cb582599-66fa-469e-b316-7512dfe9f934/1f34c92c-c695-46f3-9ea2-077f03a87b5d")
 		(sheetname "/Power 6V/")
@@ -6098,7 +6153,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.49 0.73)
@@ -6330,7 +6385,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom dnp)
+		(attr smd exclude_from_pos_files exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.4 0.6)
@@ -6516,7 +6571,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 5.575 -5)
@@ -7168,6 +7223,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a668b4ec-873b-4e0c-b89f-35e95c55e0d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/1fcac8df-ddd4-484c-8a34-de1e16661759")
 		(sheetname "/Servos/")
@@ -7355,6 +7421,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b89d32c1-7c3a-4fc6-a991-d3ce0cfca92d")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -8610,7 +8687,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.36 -1)
@@ -8890,6 +8967,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C8598"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d087bc67-5e32-4450-900c-dcc84cc7d190")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/72e034f4-af39-4b4f-a873-83dbdb37c2f8/ceac19a5-42b4-4f89-9e0e-8ef690578dde")
 		(sheetname "/MCU/")
@@ -9145,6 +9234,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "df109ebd-8aba-4b1e-a4e9-6e46c6f30d94")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -9710,6 +9810,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "80030c16-65ce-4125-bc43-142f439bef4b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/72e034f4-af39-4b4f-a873-83dbdb37c2f8/3540c12d-989c-4c0b-b082-4a296b1d24fb")
 		(sheetname "/MCU/")
@@ -10096,7 +10207,7 @@
 				(pins "1" "2" "3" "4")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.85 -2.75)
@@ -10388,6 +10499,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9ecaa47f-0280-4f55-bfbf-0f3820d58141")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/cb582599-66fa-469e-b316-7512dfe9f934/037a672c-b4bb-4b02-ae61-5097b45486cc")
 		(sheetname "/Power 6V/")
@@ -10584,7 +10706,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 6.46)
@@ -10833,7 +10955,7 @@
 				)
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -10.93 -23.33)
@@ -12580,7 +12702,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 6.46)
@@ -13198,7 +13320,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom dnp)
+		(attr smd exclude_from_pos_files exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.4 -0.6)
@@ -13388,7 +13510,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom dnp)
+		(attr smd exclude_from_pos_files exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.4 0.6)
@@ -14308,6 +14430,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "281b5909-fe8f-4895-9677-405ab0889d50")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -15282,7 +15415,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.75 3.6)
@@ -15992,7 +16125,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.49 -0.73)
@@ -17841,6 +17974,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0280bc38-9e04-4374-b99e-90731c06e895")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/cd36d579-b21d-4776-b549-fe03993f70be")
 		(sheetname "/Servos/")
@@ -18221,6 +18365,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1591"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "64ca9ce8-46b6-4229-bbf4-781fa1a39ddc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/72e034f4-af39-4b4f-a873-83dbdb37c2f8/94cf848c-7422-4b56-a15f-37d4ad2dbd97")
 		(sheetname "/MCU/")
@@ -18408,6 +18563,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "35754e6d-9a0f-4313-b58c-8022c7443d0d")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -18607,7 +18773,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 6.46)
@@ -18848,7 +19014,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -19092,7 +19258,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.37 2.37)
@@ -19540,6 +19706,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7a890c6a-288c-4bc8-93aa-5270b041ea52")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a1bbad55-5116-4b8b-bc55-86413016acea/fa67aafd-ae51-47a2-9e70-234b42ddf636")
 		(sheetname "/Magnetometer/")
@@ -19736,7 +19913,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -19968,6 +20145,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11e064d7-d54d-44a8-ba6e-8a10ff1f2667")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -20540,7 +20728,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 12.96 1.665)
@@ -20787,7 +20975,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -21745,7 +21933,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 6.46)
@@ -23709,6 +23897,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "50b9e979-69b3-4cc6-bed4-6a11f9c39121")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/23a52766-c435-4ec6-a525-c0d3e4ccffd5/ae50e3fb-50cd-4901-b306-350e1cfe2cc1")
 		(sheetname "/Speaker/")
@@ -23910,7 +24109,7 @@
 			)
 		)
 		(solder_mask_margin 0.038)
-		(attr smd exclude_from_bom dnp)
+		(attr smd exclude_from_pos_files exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 1.4 0.6)
@@ -25130,6 +25329,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "aec10303-b229-430b-b2ac-411a4130f1e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/7b30368e-5285-478d-b513-83878a1930d1")
 		(sheetname "/Servos/")
@@ -26078,7 +26288,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.979646 -2.875)
@@ -28564,6 +28774,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c2a856ed-7ef6-423f-9836-58f0d80a4db1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/23a52766-c435-4ec6-a525-c0d3e4ccffd5/83542fc5-60f9-4564-9aeb-0c0d0e7343a6")
 		(sheetname "/Speaker/")
@@ -29135,7 +29356,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 5.25 -3.4)
@@ -29782,6 +30003,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "68ab2840-6336-452e-ac55-269b663af64f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/33761f75-fe71-4cf6-b45c-3480e19c3d3a")
 		(sheetname "/Servos/")
@@ -30398,7 +30630,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -30643,7 +30875,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 7.71 -2.71)
@@ -32073,6 +32305,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ce8076c5-9404-4d6d-99c2-7e3338f5aec9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/2dd9e31c-6b26-4236-b119-133e33aa12b7")
 		(sheetname "/Servos/")
@@ -32263,6 +32506,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e267e1d0-2ae3-48e4-8232-8725c5b5b021")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/23a52766-c435-4ec6-a525-c0d3e4ccffd5/2caa970e-fa90-4daa-b764-83bd50794acf")
 		(sheetname "/Speaker/")
@@ -32450,6 +32704,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f4aec909-258e-4786-ad21-65057e9cd487")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -34797,6 +35062,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a384b56a-7b3b-4b5c-a9ff-b86b5d97aba7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e60655fa-8b79-4a91-9dd4-c1d531e678c6/d91dfc51-93fe-440d-bccb-9b243969fd04")
 		(sheetname "/Servos/")
@@ -35214,6 +35490,17 @@
 				(font
 					(size 1.27 1.27)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C105882"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fe2b91a2-13c2-44c7-8f3c-b6bbbae80398")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
