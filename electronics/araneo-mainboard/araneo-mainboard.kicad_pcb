@@ -225,6 +225,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4169,6 +4170,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4370,6 +4372,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5454,6 +5457,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5936,6 +5940,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7231,6 +7236,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7432,6 +7438,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9245,6 +9252,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -9818,6 +9826,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10507,6 +10516,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -14441,6 +14451,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -17982,6 +17993,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18373,6 +18385,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -18574,6 +18587,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -19714,6 +19728,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -20156,6 +20171,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -23905,6 +23921,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -25337,6 +25354,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -28782,6 +28800,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -30011,6 +30030,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32313,6 +32333,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32514,6 +32535,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -32715,6 +32737,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35070,6 +35093,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -35501,6 +35525,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -36738,31 +36763,9 @@
 			)
 		)
 	)
-	(gr_circle
-		(center 135.7 88)
-		(end 135.9 88)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "173ea448-290e-420a-9952-cdaefb40e440")
-	)
-	(gr_circle
-		(center 135.7 88)
-		(end 136.2 88.8)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "4f827ea4-7387-414e-8ae1-823ccc5d62a1")
-	)
 	(gr_line
-		(start 136.75 95.25)
-		(end 137.45 94.75)
+		(start 136.1 86.4)
+		(end 136.8 85.9)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -36771,8 +36774,8 @@
 		(uuid "1194f35f-d13c-4c9b-9caa-10b3653bc8a4")
 	)
 	(gr_line
-		(start 136.75 95.25)
-		(end 137.45 95.75)
+		(start 136.1 86.4)
+		(end 136.8 86.9)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -36781,8 +36784,8 @@
 		(uuid "414d18d5-9ee7-4d86-901d-4c8de0bb9c0a")
 	)
 	(gr_line
-		(start 140.25 95.25)
-		(end 136.75 95.25)
+		(start 139.7 86.4)
+		(end 136.1 86.4)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -36791,8 +36794,8 @@
 		(uuid "a4e3ae0c-7f55-4484-8386-e8858af3c319")
 	)
 	(gr_line
-		(start 140.6 88.2)
-		(end 140.1 88.9)
+		(start 140.5 81.8)
+		(end 140 82.5)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -36801,8 +36804,8 @@
 		(uuid "16cb14b5-966a-4c93-ae5e-866690a7047a")
 	)
 	(gr_line
-		(start 140.6 88.2)
-		(end 141.1 88.9)
+		(start 140.5 81.8)
+		(end 141 82.5)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -36811,14 +36814,36 @@
 		(uuid "9c26b079-1f5a-426a-b095-949a2ca29ba7")
 	)
 	(gr_line
-		(start 140.6 91.7)
-		(end 140.6 88.2)
+		(start 140.5 85.6)
+		(end 140.5 81.8)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.SilkS")
 		(uuid "422bdba4-20d8-474a-8a34-efbf03ef64e5")
+	)
+	(gr_circle
+		(center 140.5 86.379694)
+		(end 140.843398 87.079694)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4f827ea4-7387-414e-8ae1-823ccc5d62a1")
+	)
+	(gr_circle
+		(center 140.5 86.4)
+		(end 140.7 86.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "173ea448-290e-420a-9952-cdaefb40e440")
 	)
 	(gr_rect
 		(start 101.25 65.7)
@@ -36832,20 +36857,8 @@
 		(layer "Edge.Cuts")
 		(uuid "1aec3088-fe31-42cc-a321-b2a7a9cc6d6f")
 	)
-	(gr_text "z"
-		(at 136.7 87.1 0)
-		(layer "F.SilkS")
-		(uuid "f64bb67e-85f0-4581-9563-afc314d5f63d")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "y"
-		(at 140.2 94.8 0)
+		(at 135.15 87.35 0)
 		(layer "F.SilkS")
 		(uuid "001bf424-978b-4dce-bb93-165d8c44446d")
 		(effects
@@ -36857,9 +36870,21 @@
 		)
 	)
 	(gr_text "x"
-		(at 140.85 88.2 0)
+		(at 141.2 82.5 0)
 		(layer "F.SilkS")
 		(uuid "a56ee9a8-51b9-4b2d-8979-b0671e4d34ce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "z"
+		(at 141.7 86.8 0)
+		(layer "F.SilkS")
+		(uuid "f64bb67e-85f0-4581-9563-afc314d5f63d")
 		(effects
 			(font
 				(size 1 1)
