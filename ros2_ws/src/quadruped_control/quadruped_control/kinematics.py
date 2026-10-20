@@ -35,7 +35,7 @@ def leg_ik(x, y, z, femur_len, tibia_len, femur_ang):
         dr *= scale
         dz *= scale
 
-    q2 = math.atan2(r, z)
+    q2 = math.atan2(dr, dz)
 
     return q1, q2
 
@@ -43,8 +43,8 @@ def leg_fk(q1, q2, femur_len, tibia_len, femur_ang):
     knee_r = femur_len * math.cos(femur_ang)
     knee_z = femur_len * math.sin(femur_ang)
 
-    dr = knee_r * tibia_len * math.sin(q2)
-    dz = knee_z * tibia_len * math.cos(q2)
+    dr = tibia_len * math.sin(q2)
+    dz = tibia_len * math.cos(q2)
 
     r = knee_r + dr
     z = knee_z + dz
