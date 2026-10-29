@@ -5,7 +5,6 @@
 #include <zephyr/net/socket.h>
 
 #define UDP_PORT 42069
-#define RX_BUFFER_SIZE 128
 
 int udp_create_socket(struct sockaddr_in *serv);
 int udp_init_client(struct sockaddr_in *client);
