@@ -15,4 +15,5 @@ target_sources(app PRIVATE
   src/display_manager.c
   src/led.c
   src/buck.c
+  src/wifi.c
 )
