@@ -7,13 +7,14 @@ project(araneo LANGUAGES C)
 target_include_directories(app PRIVATE inc)
 target_sources(app PRIVATE
   src/main.c
-  src/oled.c
-  src/icons.c
-  src/servo.c
-  src/commands.c
-  src/button.c
-  src/display_manager.c
-  src/led.c
-  src/buck.c
+  # src/oled.c
+  # src/icons.c
+  # src/servo.c
+  # src/commands.c
+  # src/button.c
+  # src/display_manager.c
+  # src/led.c
+  # src/buck.c
   src/wifi.c
+  src/communication.c
 )

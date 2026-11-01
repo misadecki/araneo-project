@@ -67,7 +67,7 @@
   pinctrl-names = "default";
 
   oled: oled@3c {
-    status = "okay";
+    status = "disabled";
     compatible="solomon,ssd1306";
     reg = <0x3c>;
     height = <64>;
