@@ -9,7 +9,7 @@
         <visual>
             <origin xyz="-7.41044e-18 7.51008e-18 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/battery.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/battery.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -25,7 +25,7 @@
         <visual>
             <origin xyz="-0.0415721 -1.04723e-18 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/body_bottom.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/body_bottom.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -41,7 +41,7 @@
         <visual>
             <origin xyz="-0.095 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/body_top.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/body_top.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -57,7 +57,7 @@
         <visual>
             <origin xyz="9.39275e-18 -9.86649e-19 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/electronics.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/electronics.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -73,7 +73,7 @@
         <visual>
             <origin xyz="0.000896083 0.004 -0.0013027" rpy="0 0.646511 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/femur_left.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/femur_left.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -89,7 +89,7 @@
         <visual>
             <origin xyz="0.00128246 0.004 0.000924824" rpy="0 -0.303018 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/femur_left.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/femur_left.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -105,7 +105,7 @@
         <visual>
             <origin xyz="0.00133434 0.004 -0.000848252" rpy="0 0.244512 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/femur_right.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/femur_right.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -121,7 +121,7 @@
         <visual>
             <origin xyz="0.000891172 0.004 0.00130607" rpy="0 -0.650276 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/femur_right.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/femur_right.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -137,14 +137,14 @@
         <visual>
             <origin xyz="0.013 0.016 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/head.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/head.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
             </material>
         </visual>
     </link>
-    <link name="root" />
+    <link name="base_link" />
     <link name="servo">
         <inertial>
             <mass value="7.03502e-06" />
@@ -154,7 +154,7 @@
         <visual>
             <origin xyz="3.25309e-19 4.01038e-19 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -170,7 +170,7 @@
         <visual>
             <origin xyz="3.25309e-19 4.01038e-19 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -186,7 +186,7 @@
         <visual>
             <origin xyz="3.25309e-19 4.01038e-19 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -202,7 +202,7 @@
         <visual>
             <origin xyz="3.25309e-19 4.01038e-19 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -218,7 +218,7 @@
         <visual>
             <origin xyz="0 -0.00455 -0.02675" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -234,7 +234,7 @@
         <visual>
             <origin xyz="0 -0.00455 -0.02675" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -250,7 +250,7 @@
         <visual>
             <origin xyz="0 -0.00455 -0.02675" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -266,7 +266,7 @@
         <visual>
             <origin xyz="0 -0.00455 -0.02675" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/servo.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/servo.stl" scale="1 1 1" />
             </geometry>
             <material name="0.615686_0.811765_0.929412_0.000000_0.000000">
                 <color rgba="0.615686 0.811765 0.929412 1" />
@@ -282,7 +282,7 @@
         <visual>
             <origin xyz="0.0061 0.0144 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/tibia_left.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/tibia_left.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -298,7 +298,7 @@
         <visual>
             <origin xyz="0.0061 0.0144 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/tibia_left.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/tibia_left.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -314,7 +314,7 @@
         <visual>
             <origin xyz="0.0061 0.0304 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/tibia_right.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/tibia_right.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -330,7 +330,7 @@
         <visual>
             <origin xyz="0.0061 0.0304 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://araneo/meshes/tibia_right.stl" scale="1 1 1" />
+                <mesh filename="package://quadruped_description/meshes/tibia_right.stl" scale="1 1 1" />
             </geometry>
             <material name="0.901961_0.901961_0.901961_0.000000_0.000000">
                 <color rgba="0.901961 0.901961 0.901961 1" />
@@ -416,7 +416,7 @@
     <joint name="origin" type="fixed">
         <origin xyz="0 0 0" rpy="-1.73472e-18 -9.24446e-33 2.76101e-30" />
         <axis xyz="0 0 -1" />
-        <parent link="root" />
+        <parent link="base_link" />
         <child link="body_bottom" />
     </joint>
     <joint name="right_back_coxa" type="revolute">

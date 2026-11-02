@@ -1,0 +1,5 @@
+ik_node:
+  ros__parameters:
+    femur_len: 0.0663
+    tibia_len: 0.046
+    femur_ang: -0.362
