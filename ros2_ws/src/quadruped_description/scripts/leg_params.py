@@ -59,24 +59,31 @@ for label, n in legs:
 
     offset = H[:3, 3]
     d = K[:3, 3] - offset
-    yaw = np.arctan2(d[1], d[0])
+    ax = K[:3, :3] @ axis_of(tibia)
+
+    perp = np.array([-ax[1], ax[0]])
+
+    if perp @ d[:2] < 0:
+        perp = -perp
+
+    yaw = np.arctan2(perp[1], perp[0])
     c, s = np.cos(yaw), np.sin(yaw)
 
     def to_leg(v):
         # return: R(-yaw) * v
         return np.array([v[0] * c + v[1] * s, -v[0] * s + v[1] * c, v[2]])
     # len = sqrt(x^2 + y^2 + z^2)
-    femur_r = math.hypot(d[0], d[1])
-    femur_len = math.hypot(femur_r, d[2])
-    femur_ang = np.arctan2(d[2], femur_r)
+    dl = to_leg(d)
+    femur_len = math.hypot(dl[0], dl[2])
+    femur_ang = np.arctan2(dl[2], dl[0])
 
     f = to_leg(F[:3, 3] - K[:3, 3])
     tibia_len = math.hypot(f[0], f[2])
-    lateral = f[1]
+    lateral = f[1] + dl[1]
     q2_zero = np.arctan2(f[0], f[2])
 
     coxa_axis = H[:3, :3] @ axis_of(coxa)
-    tibia_axis = to_leg(K[:3, :3] @ axis_of(tibia))
+    tibia_axis = to_leg(ax)
     q1_sign = 1 if coxa_axis[2] > 0 else -1
     q2_sign = 1 if tibia_axis[1] > 0 else -1
 
