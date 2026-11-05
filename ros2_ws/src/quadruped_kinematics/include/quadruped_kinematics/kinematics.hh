@@ -1,7 +1,6 @@
 #ifndef KINEMATICS_HH
 #define KINEMATICS_HH
 
-#include <cmath>
 #include <array>
 
 namespace quadruped {
@@ -20,11 +19,15 @@ namespace quadruped {
     double femur_len;
     double tibia_len;
     double femur_ang;
+    double lateral;
   };
 
   struct LegMount {
     Vector3D offset;
     double yaw;
+    double q1_sign;
+    double q2_sign;
+    double q2_zero;
   };
 
   enum Leg : std::size_t {
@@ -38,8 +41,12 @@ namespace quadruped {
 
   constexpr double PI = 3.14159265358979323846264338327950288419716939937510;
   extern const std::array<LegMount, LEG_COUNT> legMounts;
+  extern const std::array<LegGeometry, LEG_COUNT> legGeometries;
 
+  JointAngles urdfToModel(const JointAngles& theta, Leg leg);
+  JointAngles modelToUrdf(const JointAngles& q, Leg leg);
   Vector3D bodyToLegFrame(const Vector3D& p, Leg leg);
+  Vector3D legToBodyFrame(const Vector3D& p, Leg leg);
   JointAngles legIK(const Vector3D& p, const LegGeometry& g);
   Vector3D legFK(const JointAngles& q, const LegGeometry& g);
 }; // namespace quadruped
