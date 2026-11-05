@@ -1,5 +1,6 @@
 #include "quadruped_gait/trajectory.hh"
 #include <cmath>
+#include <stdexcept>
 
 Quintic::Quintic(double p0, double v0, double a0, double p1, double v1, double a1,
         double T) {
@@ -38,3 +39,17 @@ FootTrajectory::Point FootTrajectory::at(double t) const {
   return {cx.pos(ts), z};
 }
 
+FootTrajectory::FootTrajectory(double _L, double _v, double _Tsw, double _h,
+  double _z0) {
+  L = _L; v = _v; Tsw = _Tsw; Tst = (L / v); z0 = _z0;
+  T = (Tst + Tsw);
+
+  cx = Quintic(-L/2, -v, 0, L/2, -v, 0, Tsw);
+  zup = Quintic(z0, 0, 0, z0 + _h, 0, 0, Tsw/2);
+  zdn = Quintic(z0 + _h, 0, 0, z0, 0, 0, Tsw/2);
+
+  if (v <= 0 || Tsw <= 0) throw std::invalid_argument("v, Tsw need to be \
+    positive.");
+
+  if (Tst < Tsw) throw std::invalid_argument("Too high velocity magnitude.");
+}

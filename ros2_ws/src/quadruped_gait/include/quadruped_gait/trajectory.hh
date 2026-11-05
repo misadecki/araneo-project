@@ -24,7 +24,7 @@ public:
     double x, z;
   };
 
-  FootTrajectory(double L, double v, double Tsw, double h, double z0);
+  FootTrajectory(double _L, double _v, double _Tsw, double _h, double _z0);
   double period() const {return T;};
   Point at(double t) const;
 };
