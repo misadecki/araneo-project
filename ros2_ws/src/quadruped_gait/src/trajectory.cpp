@@ -1,4 +1,5 @@
 #include "quadruped_gait/trajectory.hh"
+#include <cmath>
 
 Quintic::Quintic(double p0, double v0, double a0, double p1, double v1, double a1,
         double T) {
@@ -22,3 +23,18 @@ double Quintic::vel(double t) const {
 double Quintic::acc(double t) const {
   return ((20 * c[5] * t + 12 * c[4]) * t + 6 * c[3]) * t + 2 * c[2];
 }
+
+FootTrajectory::Point FootTrajectory::at(double t) const {
+  t = std::fmod(t, T);
+  if (t < 0) t += T;
+  if (t < Tst) return {L / 2 - v * t, z0};
+
+  const double ts = t - Tst;
+  const double z = 0.0;
+
+  if (ts < Tsw / 2) zup.pos(ts);
+  else zdn.pos(ts - Tsw / 2);
+
+  return {cx.pos(ts), z};
+}
+

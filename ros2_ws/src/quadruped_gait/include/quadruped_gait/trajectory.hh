@@ -40,7 +40,7 @@ public:
  * h - wysokość podnoszenia stopy
  * z0 - wysokość stopy w podporze
  * Tsw - czas stance
- * cx - 
+ * cx - położenie w czasie swingu
  * zup - wznoszenie stopy
  * zdn - opadanie stopy
  * */
