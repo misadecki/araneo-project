@@ -9,16 +9,22 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(quadruped_kinematics REQUIRED)
 
-add_executable(trajectory src/trajectory.cpp)
+add_library(trajectory src/trajectory.cpp)
 target_include_directories(trajectory PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
 )
 
-ament_target_dependencies(trajectory rclcpp std_msgs)
+add_executable(test_traj tools/trajectory_test.cpp)
+target_link_libraries(test_traj trajectory quadruped_kinematics::quadruped_kinematics)
 
-install(TARGETS trajectory DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY include/ DESTINATION include)
+install(TARGETS trajectory 
+  LIBRARY DESTINATION lib
+)
+install(TARGETS test_traj DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
