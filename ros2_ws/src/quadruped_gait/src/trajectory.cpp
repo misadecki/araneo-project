@@ -51,5 +51,5 @@ FootTrajectory::FootTrajectory(double _L, double _v, double _Tsw, double _h,
   if (v <= 0 || Tsw <= 0) throw std::invalid_argument("v, Tsw need to be \
     positive.");
 
-  if (Tst < Tsw) throw std::invalid_argument("Too high velocity magnitude.");
+  if (Tst < Tsw) throw std::invalid_argument("This robot can't run.");
 }
