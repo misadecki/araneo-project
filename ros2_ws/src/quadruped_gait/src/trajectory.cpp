@@ -31,10 +31,10 @@ FootTrajectory::Point FootTrajectory::at(double t) const {
   if (t < Tst) return {L / 2 - v * t, z0};
 
   const double ts = t - Tst;
-  const double z = 0.0;
+  double z = 0.0;
 
-  if (ts < Tsw / 2) zup.pos(ts);
-  else zdn.pos(ts - Tsw / 2);
+  if (ts < Tsw / 2) z = zup.pos(ts);
+  else z = zdn.pos(ts - Tsw / 2);
 
   return {cx.pos(ts), z};
 }
