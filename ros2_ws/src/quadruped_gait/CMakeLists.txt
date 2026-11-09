@@ -11,8 +11,11 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(quadruped_kinematics REQUIRED)
 
-add_library(trajectory src/trajectory.cpp)
-target_include_directories(trajectory PUBLIC
+add_library(quadruped_gait
+  src/trajectory.cpp
+
+)
+target_include_directories(quadruped_gait PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
 )

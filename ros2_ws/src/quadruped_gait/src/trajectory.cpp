@@ -28,28 +28,27 @@ double Quintic::acc(double t) const {
 FootTrajectory::Point FootTrajectory::at(double t) const {
   t = std::fmod(t, T);
   if (t < 0) t += T;
-  if (t < Tst) return {L / 2 - v * t, z0};
+  if (t < Tst) return {L / 2 - p.v * t, p.z0};
 
   const double ts = t - Tst;
   double z = 0.0;
 
-  if (ts < Tsw / 2) z = zup.pos(ts);
-  else z = zdn.pos(ts - Tsw / 2);
+  if (ts < p.Tsw / 2) z = zup.pos(ts);
+  else z = zdn.pos(ts - p.Tsw / 2);
 
   return {cx.pos(ts), z};
 }
 
-FootTrajectory::FootTrajectory(double _L, double _v, double _Tsw, double _h,
-  double _z0) {
-  L = _L; v = _v; Tsw = _Tsw; Tst = (L / v); z0 = _z0;
-  T = (Tst + Tsw);
+FootTrajectory::FootTrajectory(double _L) {
+  if (p.v == 0 || p.Tsw <= 0) throw std::invalid_argument("Tsw need to be \
+    positive, v != 0.");
 
-  cx = Quintic(-L/2, -v, 0, L/2, -v, 0, Tsw);
-  zup = Quintic(z0, 0, 0, z0 + _h, 0, 0, Tsw/2);
-  zdn = Quintic(z0 + _h, 0, 0, z0, 0, 0, Tsw/2);
+  if (Tst < p.Tsw) throw std::invalid_argument("This robot can't run.");
 
-  if (v <= 0 || Tsw <= 0) throw std::invalid_argument("v, Tsw need to be \
-    positive.");
+  L = _L; Tst = (L / p.v);
+  T = Tst + p.Tsw;
 
-  if (Tst < Tsw) throw std::invalid_argument("This robot can't run.");
+  cx = Quintic(-L/2, -p.v, 0, L/2, -p.v, 0, p.Tsw);
+  zup = Quintic(p.z0, 0, 0, p.z0 + p.h, 0, 0, p.Tsw/2);
+  zdn = Quintic(p.z0 + p.h, 0, 0, p.z0, 0, 0, p.Tsw/2);
 }

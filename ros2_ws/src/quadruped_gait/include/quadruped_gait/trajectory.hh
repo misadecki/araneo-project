@@ -15,8 +15,13 @@ struct Quintic {
   double acc(double t) const;
 };
 
+struct TrajectoryParams {
+  double v, Tsw, h, z0;
+};
+
 class FootTrajectory {
-  double L, v, Tsw, Tst, T, z0;
+  double L, Tst, T;
+  TrajectoryParams p;
   Quintic cx, zup, zdn;
 
 public:
@@ -24,7 +29,7 @@ public:
     double x, z;
   };
 
-  FootTrajectory(double _L, double _v, double _Tsw, double _h, double _z0);
+  FootTrajectory(double _L);
   double period() const {return T;};
   Point at(double t) const;
 };
