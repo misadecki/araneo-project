@@ -29,7 +29,7 @@ public:
     double x, z;
   };
 
-  FootTrajectory(double _L);
+  FootTrajectory(double _L, const TrajectoryParams& params);
   double period() const {return T;};
   Point at(double t) const;
 };

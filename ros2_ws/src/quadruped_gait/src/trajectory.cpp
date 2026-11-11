@@ -39,14 +39,15 @@ FootTrajectory::Point FootTrajectory::at(double t) const {
   return {cx.pos(ts), z};
 }
 
-FootTrajectory::FootTrajectory(double _L) {
+FootTrajectory::FootTrajectory(double _L, const TrajectoryParams& params) :
+    L(_L), p(params) {
   if (p.v == 0 || p.Tsw <= 0) throw std::invalid_argument("Tsw need to be \
     positive, v != 0.");
 
-  if (Tst < p.Tsw) throw std::invalid_argument("This robot can't run.");
-
-  L = _L; Tst = (L / p.v);
+  Tst = (L / p.v);
   T = Tst + p.Tsw;
+
+  if (Tst < p.Tsw * (1.0 - 1e-9)) throw std::invalid_argument("This robot can't run.");
 
   cx = Quintic(-L/2, -p.v, 0, L/2, -p.v, 0, p.Tsw);
   zup = Quintic(p.z0, 0, 0, p.z0 + p.h, 0, 0, p.Tsw/2);
