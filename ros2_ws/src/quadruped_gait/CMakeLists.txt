@@ -13,7 +13,7 @@ find_package(quadruped_kinematics REQUIRED)
 
 add_library(quadruped_gait
   src/trajectory.cpp
-
+  src/gait_generator.cpp
 )
 target_include_directories(quadruped_gait PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -21,13 +21,20 @@ target_include_directories(quadruped_gait PUBLIC
 )
 
 add_executable(test_traj tools/trajectory_test.cpp)
-target_link_libraries(test_traj trajectory quadruped_kinematics::quadruped_kinematics)
+target_link_libraries(quadruped_gait PUBLIC
+  quadruped_kinematics::quadruped_kinematics
+)
+target_link_libraries(test_traj quadruped_gait quadruped_kinematics::quadruped_kinematics)
+
+add_executable(test_gait tools/gait_generator_test.cpp)
+target_link_libraries(test_gait quadruped_gait)
 
 install(DIRECTORY include/ DESTINATION include)
-install(TARGETS trajectory 
+install(TARGETS quadruped_gait 
   LIBRARY DESTINATION lib
 )
 install(TARGETS test_traj DESTINATION lib/${PROJECT_NAME})
+install(TARGETS test_gait DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
