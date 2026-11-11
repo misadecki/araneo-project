@@ -6,20 +6,30 @@
 #include "quadruped_kinematics/kinematics.hh"
 
 class GaitGenerator {
-  Gait gait;
-  TrajectoryParams p;
-  double phase = 0.0;
-  std::array<double, quadruped::LEG_COUNT> prev_phi = {0};
-  std::array<FootTrajectory, quadruped::LEG_COUNT> legs;
-public:
-  static constexpr double min_speed = 1e-3;
-  using Targets = std::array<FootTrajectory::Point, quadruped::LEG_COUNT>;
-  GaitGenerator(const Gait& g, TrajectoryParams& p);
-  void set_speed(double v) {p.v = v;};
-  double period() const {return legs[0].period();};
-  Targets foot_targets(double dt);
-};
+  using Legs = std::array<FootTrajectory, quadruped::LEG_COUNT>;
 
-// Co z Trajectoryparams w trajectory?
+  Gait g;
+  TrajectoryParams p;
+  double phase = 0.0, v_cmd = 0.0, v = 0.0, a_max;
+  Legs legs;
+  std::array<bool, quadruped::LEG_COUNT> idle = {true, true, true, true};
+  std::array<double, quadruped::LEG_COUNT> prev_phi = {0};
+
+  static Legs make_legs(const Gait& g, const TrajectoryParams& p);
+  static TrajectoryParams with_speed(TrajectoryParams p, double v) {
+    p.v = v;
+    return p;
+  }
+  double speed_eff() const;
+public:
+  static constexpr double MIN_SPEED = 1e-3;
+  using Targets = std::array<FootTrajectory::Point, quadruped::LEG_COUNT>;
+
+  GaitGenerator(const Gait& gait, const TrajectoryParams& params, double a);
+  void set_speed(double v) {v_cmd = v;};
+  double period() const {return legs[0].period();}
+  Targets foot_targets(double dt);
+  double speed() const {return v;}
+};
 
 #endif // GAIT_GENERATOR_HH
