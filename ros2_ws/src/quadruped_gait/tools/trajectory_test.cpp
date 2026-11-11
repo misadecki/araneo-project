@@ -1,4 +1,5 @@
 #include "quadruped_gait/trajectory.hh"
+#include "quadruped_gait/gait.hh"
 #include "quadruped_kinematics/kinematics.hh"
 #include <fstream>
 #include <cmath>
@@ -7,7 +8,9 @@ int main() {
   const auto &g = quadruped::legGeometries[0];
   quadruped::JointAngles qn = {0.0, M_PI};
   const auto nom = quadruped::legFK(qn, g);
-  FootTrajectory traj(0.08, 0.10, 0.30, 0.03, nom.z);
+
+  const TrajectoryParams params = {0.10, 0.30, 0.03, nom.z};
+  const FootTrajectory traj = make_traj(WALK, params);
 
   const double T = traj.period();
   const double dt = 0.001;
