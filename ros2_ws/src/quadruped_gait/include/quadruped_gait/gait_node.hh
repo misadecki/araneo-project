@@ -2,18 +2,20 @@
 #define GAIT_NODE_HH
 
 #include "sensor_msgs/msg/joint_state.hpp"
-#include "quadruped_gait/trajectory.hh"
+#include "quadruped_gait/gait_generator.hh"
 #include <rclcpp/rclcpp.hpp>
+#include "geometry_msgs/msg/twist.hpp"
 
 class GaitNode : public rclcpp::Node {
   rclcpp::TimerBase::SharedPtr tim;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr pub;
-  rclcpp::Time t0;
-  std::array<double, 4> q1_offset, q2_offset,
-                        q1_sign, phase;
-  std::array<std::string, 8> names;
-  std::unique_ptr<FootTrajectory> traj;
+  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub;
+  rclcpp::Time last_cmd, last_tick;
+  double cmd_timeout, speed_scale;
+  std::array<std::string, quadruped::LEG_COUNT * 2> names;
+  std::unique_ptr<GaitGenerator> gen;
   void tick();
+  void on_cmd(const geometry_msgs::msg::Twist::SharedPtr msg);
 public:
   GaitNode();
 };
