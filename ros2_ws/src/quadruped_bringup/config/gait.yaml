@@ -7,3 +7,5 @@ gait_node:
     dq2: -0.6
     a_max: 0.2
     rate_hz: 50.0
+    speed_scale: 1.0
+    cmd_timeout: 0.5
