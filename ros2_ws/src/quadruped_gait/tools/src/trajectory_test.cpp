@@ -3,13 +3,26 @@
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include <stdexcept>
+#include "gait_config.hh"
+#include <iostream>
 
-int main() {
+int main(int argc, char** argv) {
+  if (argc < 1)
+    throw std::runtime_error("You need to pass YAML path.");
+  const std::string path = argv[1];
+  GaitConfig cfg = {};
+  try {
+    cfg = loadGaitConfig(path);
+  } catch (const std::exception& ex) {
+    std::cerr << "Error loading file: " << path << ": " << ex.what() << '\n';
+    return 2;
+  }
+
   const auto &g = quadruped::legGeometries[0];
 
   // q1_m, q2_st, w, Tsw, dq2
-  const TrajectoryParams params = {0.3, M_PI - 0.3, 0.8, 0.3, -0.6};
-  const FootTrajectory traj(params);
+  const FootTrajectory traj(cfg.params);
 
   const double T = traj.period();
   const double dt = 0.001;

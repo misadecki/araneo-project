@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(quadruped_kinematics REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 add_library(quadruped_gait
   src/trajectory.cpp
@@ -19,15 +20,27 @@ target_include_directories(quadruped_gait PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
 )
-
-add_executable(test_traj tools/trajectory_test.cpp)
 target_link_libraries(quadruped_gait PUBLIC
   quadruped_kinematics::quadruped_kinematics
 )
-target_link_libraries(test_traj quadruped_gait quadruped_kinematics::quadruped_kinematics)
 
-add_executable(test_gait tools/gait_generator_test.cpp)
-target_link_libraries(test_gait quadruped_gait)
+add_executable(test_traj 
+  tools/src/trajectory_test.cpp
+  tools/src/gait_config.cpp
+)
+target_include_directories(test_traj PRIVATE tools/include)
+target_link_libraries(test_traj 
+  quadruped_gait 
+  quadruped_kinematics::quadruped_kinematics
+  yaml-cpp
+)
+
+add_executable(test_gait 
+  tools/src/gait_generator_test.cpp 
+  tools/src/gait_config.cpp
+)
+target_include_directories(test_gait PRIVATE tools/include)
+target_link_libraries(test_gait quadruped_gait yaml-cpp)
 
 install(DIRECTORY include/ DESTINATION include)
 install(TARGETS quadruped_gait 
