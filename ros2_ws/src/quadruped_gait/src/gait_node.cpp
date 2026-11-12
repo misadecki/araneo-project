@@ -2,7 +2,7 @@
 #include "quadruped_gait/trajectory.hh"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include <chrono>
-#include <stdexcept>
+#include "quadruped_gait/gait.hh"
 
 GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
   TrajectoryParams p;
@@ -18,12 +18,7 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
   speed_scale = declare_parameter("speed_scale", 1.0);
   cmd_timeout = declare_parameter("cmd_timeout", 0.5);
 
-  const Gait* gait = nullptr;
-  if (gait_name == "trot") gait = &TROT;
-  else if (gait_name == "walk") gait = &WALK;
-  else throw std::invalid_argument("gait: trot | walk");
-
-  gen = std::make_unique<GaitGenerator>(*gait, p, a_max);
+  gen = std::make_unique<GaitGenerator>(gait_by_name(gait_name), p, a_max);
 
   names = {"left_front_coxa", "left_front_tibia", "right_front_coxa",
     "right_front_tibia", "left_back_coxa", "left_back_tibia", "right_back_coxa",
