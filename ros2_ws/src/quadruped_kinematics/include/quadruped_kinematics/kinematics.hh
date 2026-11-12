@@ -29,6 +29,11 @@ namespace quadruped {
     double q2_sign;
     double q2_zero;
   };
+  
+  struct LegConfig {
+    LegMount mount;
+    LegGeometry geom;
+  };
 
   enum Leg : std::size_t {
     FRONT_LEFT = 0,
@@ -39,14 +44,14 @@ namespace quadruped {
     LEG_COUNT
   };
 
+  using RobotConfig = std::array<LegConfig, LEG_COUNT>;
+
   constexpr double PI = 3.14159265358979323846264338327950288419716939937510;
-  extern const std::array<LegMount, LEG_COUNT> legMounts;
-  extern const std::array<LegGeometry, LEG_COUNT> legGeometries;
 
   JointAngles urdfToModel(const JointAngles& theta, Leg leg);
   JointAngles modelToUrdf(const JointAngles& q, Leg leg);
-  Vector3D bodyToLegFrame(const Vector3D& p, Leg leg);
-  Vector3D legToBodyFrame(const Vector3D& p, Leg leg);
+  Vector3D bodyToLegFrame(const Vector3D& p, const LegMount& m);
+  Vector3D legToBodyFrame(const Vector3D& p, const LegMount& m);
   JointAngles legIK(const Vector3D& p, const LegGeometry& g);
   Vector3D legFK(const JointAngles& q, const LegGeometry& g);
 }; // namespace quadruped

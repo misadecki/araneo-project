@@ -36,8 +36,7 @@ namespace quadruped {
     return {mount.q1_sign * q.q1, mount.q2_sign * wrap(q.q2 - mount.q2_zero)};
   }
 
-  Vector3D bodyToLegFrame(const Vector3D &p, Leg leg) {
-    const auto& m = legMounts[leg];
+  Vector3D bodyToLegFrame(const Vector3D &p, const LegMount& m) {
     const double dx = p.x - m.offset.x;
     const double dy = p.y - m.offset.y;
     const double dz = p.z - m.offset.z;
@@ -46,8 +45,7 @@ namespace quadruped {
     return {dx * c + dy * s, -dx * s + dy * c, dz};
   }
   
-  Vector3D legToBodyFrame(const Vector3D& p, Leg leg) {
-    const auto& m = legMounts[leg];
+  Vector3D legToBodyFrame(const Vector3D& p, const LegMount& m) {
     const double c = std::cos(m.yaw), s = std::sin(m.yaw);
     return {p.x * c - p.y * s + m.offset.x,
             p.x * s + p.y * c + m.offset.y,
