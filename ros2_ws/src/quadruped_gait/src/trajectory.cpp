@@ -41,11 +41,8 @@ FootTrajectory::Joints FootTrajectory::at(double t) const {
 
 FootTrajectory::FootTrajectory(const TrajectoryParams& params) :
     p(params) {
-  if (p.w <= 0 || p.q1_m <= 0) throw std::invalid_argument("q1 amplitude and omega need to be \
-    positive.");
-
-  if (p.w >= 2 * p.q1_m / p.Tsw)
-    throw std::invalid_argument("w <= 2*q1m/Tsw");
+  if (p.w <= 0 || p.q1_m <= 0 || p.Tsw <= 0) throw std::invalid_argument("q1 \
+              amplitude, omega and Tsw need to be positive.");
 
   Tst = 2 * p.q1_m / p.w;
   T = Tst + p.Tsw;
