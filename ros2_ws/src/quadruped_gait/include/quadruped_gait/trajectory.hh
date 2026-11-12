@@ -16,38 +16,40 @@ struct Quintic {
 };
 
 struct TrajectoryParams {
-  double v, Tsw, h, z0;
+  double q1_m, q2_st, w, Tsw, dq2;
 };
 
 class FootTrajectory {
-  double L, Tst, T;
   TrajectoryParams p;
-  Quintic cx, zup, zdn;
+  double Tst, T;
+  Quintic q1, q2up, q2dn;
 
 public:
-  struct Point {
-    double x, z;
+  struct Joints {
+    double q1, q2;
   };
 
-  FootTrajectory(double _L, const TrajectoryParams& params);
+  FootTrajectory(const TrajectoryParams& params);
   double period() const {return T;};
-  Point at(double t) const;
+  Joints at(double t) const;
 };
 
 /* Oznaczenia 
  * c - współczynniki wielomianu
  * {p, v, a}0 - położenie, prędkość, przyspieszenie początkowe
  * {p, v, a}1 - -              ||               - końcowe
- * L - długość kroku
- * v - prędkość robota
+ * q1_m - maksymalna wartość kąta coxa
+ * q2_m - maksymalna wartość kąta tibia
+ * dq2 - zmiana kąta tibia w swingu
+ * w - prędkość kątowa w stance
  * Tsw - czas swing
  * T - okres
  * h - wysokość podnoszenia stopy
  * z0 - wysokość stopy w podporze
- * Tsw - czas stance
- * cx - położenie w czasie swingu
- * zup - wznoszenie stopy
- * zdn - opadanie stopy
+ * Tst - czas stance
+ * q1 - kąt w czasie swingu
+ * q2up - wznoszenie stopy
+ * q2dn - opadanie stopy
  * */
 
 #endif // TRAJECTORY_HH

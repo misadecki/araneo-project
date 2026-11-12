@@ -25,31 +25,34 @@ double Quintic::acc(double t) const {
   return ((20 * c[5] * t + 12 * c[4]) * t + 6 * c[3]) * t + 2 * c[2];
 }
 
-FootTrajectory::Point FootTrajectory::at(double t) const {
+FootTrajectory::Joints FootTrajectory::at(double t) const {
   t = std::fmod(t, T);
   if (t < 0) t += T;
-  if (t < Tst) return {L / 2 - p.v * t, p.z0};
+  if (t < Tst) return {p.q1_m - p.w * t, p.q2_st};
 
   const double ts = t - Tst;
-  double z = 0.0;
+  double q2;
 
-  if (ts < p.Tsw / 2) z = zup.pos(ts);
-  else z = zdn.pos(ts - p.Tsw / 2);
+  if (ts < p.Tsw / 2) q2 = q2up.pos(ts);
+  else q2 = q2dn.pos(ts - p.Tsw / 2);
 
-  return {cx.pos(ts), z};
+  return {q1.pos(ts), q2};
 }
 
-FootTrajectory::FootTrajectory(double _L, const TrajectoryParams& params) :
-    L(_L), p(params) {
-  if (p.v == 0 || p.Tsw <= 0) throw std::invalid_argument("Tsw need to be \
-    positive, v != 0.");
+FootTrajectory::FootTrajectory(const TrajectoryParams& params) :
+    p(params) {
+  if (p.w <= 0 || p.q1_m <= 0) throw std::invalid_argument("q1 amplitude and omega need to be \
+    positive.");
 
-  Tst = (L / p.v);
+  if (p.w >= 2 * p.q1_m / p.Tsw)
+    throw std::invalid_argument("w <= 2*q1m/Tsw");
+
+  Tst = 2 * p.q1_m / p.w;
   T = Tst + p.Tsw;
 
   if (Tst < p.Tsw * (1.0 - 1e-9)) throw std::invalid_argument("This robot can't run.");
 
-  cx = Quintic(-L/2, -p.v, 0, L/2, -p.v, 0, p.Tsw);
-  zup = Quintic(p.z0, 0, 0, p.z0 + p.h, 0, 0, p.Tsw/2);
-  zdn = Quintic(p.z0 + p.h, 0, 0, p.z0, 0, 0, p.Tsw/2);
+  q1 = Quintic(-p.q1_m, -p.w, 0, p.q1_m, -p.w, 0, p.Tsw);
+  q2up = Quintic(p.q2_st, 0, 0, p.q2_st + p.dq2, 0, 0, p.Tsw/2);
+  q2dn = Quintic(p.q2_st + p.dq2, 0, 0, p.q2_st, 0, 0, p.Tsw/2);
 }

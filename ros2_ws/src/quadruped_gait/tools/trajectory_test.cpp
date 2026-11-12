@@ -1,39 +1,32 @@
 #include "quadruped_gait/trajectory.hh"
-#include "quadruped_gait/gait.hh"
 #include "quadruped_kinematics/kinematics.hh"
 #include <fstream>
 #include <cmath>
+#include <iomanip>
 
 int main() {
   const auto &g = quadruped::legGeometries[0];
-  quadruped::JointAngles qn = {0.0, M_PI};
-  const auto nom = quadruped::legFK(qn, g);
 
-  const TrajectoryParams params = {0.10, 0.30, 0.03, nom.z};
-  const FootTrajectory traj = make_traj(WALK, params);
+  // q1_m, q2_st, w, Tsw, dq2
+  const TrajectoryParams params = {0.3, M_PI - 0.3, 0.8, 0.3, -0.6};
+  const FootTrajectory traj(params);
 
   const double T = traj.period();
   const double dt = 0.001;
   const int N = static_cast<int>(2 * T / dt);
 
   std::ofstream f("traj.csv");
-  f << "t,x_ref,z_ref,y_tgt,q1,q2,x_fk,y_fk,z_fk,err,dz\n";
+  f << "t,q1,q2,x_fk,y_fk,z_fk\n";
 
   for (int i = 0; i <= N; ++i) {
     const double t = i * dt;
-    const auto p = traj.at(t);
-    quadruped::Vector3D vec = {nom.x, nom.y + p.x, p.z};
+    const auto j = traj.at(t);
 
-    auto q = quadruped::legIK(vec, g);
-    auto pos = quadruped::legFK(q, g);
+    const auto pos = quadruped::legFK({j.q1, j.q2}, g);
 
-    const double err = std::sqrt(std::pow(pos.x - vec.x, 2) + std::pow(pos.y -
-                        vec.y, 2) + std::pow(pos.z - vec.z, 2));
-    
-    const double dz = pos.z - vec.z;
-
-    f << t << ',' << p.x << ',' << p.z << ',' << vec.y << ',' << q.q1 << ',' << q.q2 << ',' <<
-    pos.x << ',' << pos.y << ',' << pos.z << ',' << err << ',' << dz << '\n';
+    f << std::setprecision(12);
+    f << t << ',' << j.q1 << ',' << j.q2 << ',' << pos.x << ',' << pos.y << ','
+      << pos.z << '\n';
   }
 
   return 0;
