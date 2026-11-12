@@ -25,15 +25,13 @@ namespace quadruped {
     return std::atan2(std::sin(a), std::cos(a));
   }
 
-  JointAngles urdfToModel(const JointAngles& theta, Leg leg) {
-    const auto& mount = legMounts[leg];
-    return {mount.q1_sign * theta.q1, wrap(mount.q2_zero + mount.q2_sign *
+  JointAngles urdfToModel(const JointAngles& theta, const LegMount& m) {
+    return {m.q1_sign * theta.q1, wrap(m.q2_zero + m.q2_sign *
                                                             theta.q2)};
   }
 
-  JointAngles modelToUrdf(const JointAngles& q, Leg leg) {
-    const auto& mount = legMounts[leg];
-    return {mount.q1_sign * q.q1, mount.q2_sign * wrap(q.q2 - mount.q2_zero)};
+  JointAngles modelToUrdf(const JointAngles& q, const LegMount& m) {
+    return {m.q1_sign * q.q1, m.q2_sign * wrap(q.q2 - m.q2_zero)};
   }
 
   Vector3D bodyToLegFrame(const Vector3D &p, const LegMount& m) {

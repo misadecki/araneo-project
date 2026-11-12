@@ -48,8 +48,8 @@ namespace quadruped {
 
   constexpr double PI = 3.14159265358979323846264338327950288419716939937510;
 
-  JointAngles urdfToModel(const JointAngles& theta, Leg leg);
-  JointAngles modelToUrdf(const JointAngles& q, Leg leg);
+  JointAngles urdfToModel(const JointAngles& theta, const LegMount& m);
+  JointAngles modelToUrdf(const JointAngles& q, const LegMount& m);
   Vector3D bodyToLegFrame(const Vector3D& p, const LegMount& m);
   Vector3D legToBodyFrame(const Vector3D& p, const LegMount& m);
   JointAngles legIK(const Vector3D& p, const LegGeometry& g);
