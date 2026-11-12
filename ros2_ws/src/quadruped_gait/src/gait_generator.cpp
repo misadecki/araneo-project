@@ -7,8 +7,8 @@ static const Gait& validate_duty(const Gait& g, const TrajectoryParams& p) {
   if (!(g.duty > 0.0 && g.duty < 1.0))
     throw std::invalid_argument("GaitGenerator: duty out of [0.0, 1.0]");
   
-  if (!(p.v > 0.0))
-    throw std::invalid_argument("Nominal speed need to be positive.");
+  if (!(p.Tsw > 0.0 && p.q1_m > 0.0))
+    throw std::invalid_argument("Tsw and q1 amplitude need to be positive.");
   return g;
 }
 
@@ -18,15 +18,17 @@ GaitGenerator::GaitGenerator(const Gait& gait, const TrajectoryParams& params,
 
 GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   Targets out;
-  const double dv = a_max * dt;
-  v += std::clamp(v_cmd - v, -dv, dv);
+  const double ds = a_max * dt;
+  s += std::clamp(s_cmd - s, -ds, ds);
   
-  const bool stopping = (std::abs(v_cmd) < MIN_SPEED && std::abs(v) <
+  const bool stopping = (std::abs(s_cmd) < MIN_SPEED && std::abs(s) <
                                                            MIN_SPEED);
   const bool all_idle = std::all_of(idle.begin(), idle.end(), [](bool b) {return b;});
 
+  const FootTrajectory::Joints rest = {0.0, p.q2_st};
+
   if (stopping && all_idle) {
-    out.fill({0.0, p.z0});
+    out.fill(rest);
     return out;
   }
 
@@ -39,7 +41,6 @@ GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   }
 
   phase = std::fmod(phase + dt / ref.period(), 1.0);
-  const double scale = v / p.v;
 
   for (int i = 0; i < static_cast<int>(quadruped::LEG_COUNT); ++i) {
     const double phi = leg_phase(i);
@@ -48,10 +49,11 @@ GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
       idle[i] = stopping;
     
     prev_phi[i] = phi;
-    if (idle[i]) out[i] = {0.0, p.z0};
+
+    if (idle[i]) out[i] = rest;
     else {
-      const auto pt = ref.at(phi * ref.period());
-      out[i] = {scale * pt.x, pt.z};
+      const auto j = ref.at(phi * ref.period());
+      out[i] = {s * j.q1, j.q2};
     }
   }
 
