@@ -2,6 +2,7 @@
 #include "sensor_msgs/msg/joint_state.hpp"
 #include <chrono>
 #include <quadruped_kinematics/kinematics.hh>
+#include "quadruped_config/config_loader.hh"
 
 namespace quadruped {
   KinematicsCheck::KinematicsCheck() : Node("kinematics_check"), buf(get_clock()), listener(buf) {
@@ -11,6 +12,7 @@ namespace quadruped {
                                                             {last = *js; has = true; });
     tim = create_wall_timer(std::chrono::milliseconds(5000), [this]() {if (has)
                                                                 check(last);});
+    cfg = loadConfig(*this);
   }
 
   static double wrap(double a) {

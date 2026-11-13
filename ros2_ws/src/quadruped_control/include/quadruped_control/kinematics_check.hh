@@ -19,7 +19,7 @@ namespace quadruped {
     "right_front_tibia", "left_back_tibia", "right_back_tibia"};
     const std::array<std::string, LEG_COUNT> foot_frame = {"left_front_foot",
     "right_front_foot", "left_back_foot", "right_back_foot"};
-    const RobotConfig cfg = {};
+    RobotConfig cfg = {};
 
     double pos(const sensor_msgs::msg::JointState& js, const std::string& name);
     void check(const sensor_msgs::msg::JointState& js);

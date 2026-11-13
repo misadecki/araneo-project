@@ -1,5 +1,5 @@
 #include "quadruped_control/ik_node.hh"
-#include "quadruped_control/config_loader.hh"
+#include "quadruped_config/config_loader.hh"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
 #include <quadruped_kinematics/kinematics.hh>
@@ -44,7 +44,3 @@ namespace quadruped_control {
     pub->publish(js);
   }
 };
-
-
-
-

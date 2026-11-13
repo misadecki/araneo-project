@@ -15,6 +15,7 @@
   <depend>std_msgs</depend>
   <depend>quadruped_kinematics</depend>
   <depend>tf2_ros</depend>
+  <depend>quadruped_config</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

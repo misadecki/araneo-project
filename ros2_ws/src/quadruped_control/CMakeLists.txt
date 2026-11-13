@@ -12,27 +12,30 @@ find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(quadruped_kinematics REQUIRED)
-
+find_package(quadruped_config REQUIRED)
 find_package(tf2_ros REQUIRED)
 
 add_executable(ik_node src/ik_node.cpp src/ik_node_main.cpp)
-target_include_directories(ik_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+target_include_directories(ik_node PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 ament_target_dependencies(ik_node rclcpp sensor_msgs std_msgs)
-target_link_libraries(ik_node quadruped_kinematics::quadruped_kinematics)
+target_link_libraries(ik_node 
+  quadruped_kinematics::quadruped_kinematics
+  quadruped_config::quadruped_config
+)
 
 add_executable(k_check src/kinematics_check.cpp)
-target_include_directories(k_check PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+target_include_directories(k_check PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 ament_target_dependencies(k_check rclcpp sensor_msgs tf2_ros) 
-target_link_libraries(k_check quadruped_kinematics::quadruped_kinematics)
+target_link_libraries(k_check 
+  quadruped_kinematics::quadruped_kinematics
+  quadruped_config::quadruped_config
+)
 
-install(TARGETS ik_node DESTINATION lib/${PROJECT_NAME})
-install(TARGETS k_check DESTINATION lib/${PROJECT_NAME})
+install(TARGETS ik_node k_check DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
