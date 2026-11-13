@@ -7,9 +7,6 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
 find_package(quadruped_kinematics REQUIRED)
 find_package(yaml-cpp REQUIRED)
 
@@ -19,7 +16,7 @@ add_library(quadruped_gait
 )
 target_include_directories(quadruped_gait PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
+  $<INSTALL_INTERFACE:include>
 )
 target_link_libraries(quadruped_gait PUBLIC
   quadruped_kinematics::quadruped_kinematics
@@ -32,7 +29,6 @@ add_executable(test_traj
 target_include_directories(test_traj PRIVATE tools/include)
 target_link_libraries(test_traj 
   quadruped_gait 
-  quadruped_kinematics::quadruped_kinematics
   yaml-cpp
 )
 
@@ -43,24 +39,15 @@ add_executable(test_gait
 target_include_directories(test_gait PRIVATE tools/include)
 target_link_libraries(test_gait quadruped_gait yaml-cpp)
 
-add_executable(gait_node
-  src/gait_node.cpp
-  src/gait_node_main.cpp
-)
-target_include_directories(gait_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
-)
-target_link_libraries(gait_node quadruped_gait)
-ament_target_dependencies(gait_node rclcpp sensor_msgs)
-
 install(DIRECTORY include/ DESTINATION include)
 install(TARGETS quadruped_gait 
   LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
 )
-install(TARGETS test_traj DESTINATION lib/${PROJECT_NAME})
-install(TARGETS test_gait DESTINATION lib/${PROJECT_NAME})
-install(TARGETS gait_node DESTINATION lib/${PROJECT_NAME})
+install(TARGETS test_traj test_gait
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

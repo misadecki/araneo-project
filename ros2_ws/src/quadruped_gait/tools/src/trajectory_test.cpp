@@ -19,11 +19,15 @@ int main(int argc, char** argv) {
     return 2;
   }
 
-  const auto &g = quadruped::legGeometries[0];
-
   // q1_m, q2_st, w, Tsw, dq2
   const FootTrajectory traj(cfg.params);
-
+  //LF, FR, BL, BR
+  const quadruped::LegGeometry geom =
+    {0.0598, 0.0436, -0.2633, 0.0105};
+    // {0.0598, 0.0436, -0.2794, -0.0105};
+    // {0.0598, 0.0436, -0.2794, 0.0096};
+    // {0.0598, 0.0436, -0.2794, -0.0095};
+  // femur_len, tibia_len, femur_ang, lateral
   const double T = traj.period();
   const double dt = 0.001;
   const int N = static_cast<int>(2 * T / dt);
@@ -35,7 +39,7 @@ int main(int argc, char** argv) {
     const double t = i * dt;
     const auto j = traj.at(t);
 
-    const auto pos = quadruped::legFK({j.q1, j.q2}, g);
+    const auto pos = quadruped::legFK({j.q1, j.q2}, geom);
 
     f << std::setprecision(12);
     f << t << ',' << j.q1 << ',' << j.q2 << ',' << pos.x << ',' << pos.y << ','
