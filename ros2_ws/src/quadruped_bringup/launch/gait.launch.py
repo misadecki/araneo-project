@@ -8,6 +8,7 @@ def generate_launch_description():
     bringup = get_package_share_directory('quadruped_bringup')
     urdf_path = os.path.join(desc, 'urdf', 'araneo.urdf')
     gait_params_path = os.path.join(bringup, 'config', 'gait.yaml')
+    legs_params_path = os.path.join(bringup, 'config', 'legs.yaml')
     with open(urdf_path, 'r') as f:
         robot_description = f.read()
 
@@ -18,10 +19,10 @@ def generate_launch_description():
              parameters=[{'robot_description': robot_description}]),
         # Node(package='joint_state_publisher_gui',
         #      executable='joint_state_publisher_gui'),
-        Node(package='quadruped_gait',
+        Node(package='quadruped_gait_node',
              executable='gait_node',
              output='screen',
-             parameters=[gait_params_path],
+             parameters=[gait_params_path, legs_params_path],
              remappings=[('joint_cmd', 'joint_states')]),
         Node(package='tf2_ros', executable='static_transform_publisher',
              arguments=['--x', '0', '--y', '0', '--z', '0', '--roll', '0',

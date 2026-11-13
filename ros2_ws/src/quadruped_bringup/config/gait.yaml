@@ -2,7 +2,8 @@ gait_node:
   ros__parameters:
     gait: walk # trot | walk
     q1_m: 0.3
-    q2_st: 2.8415 # pi - 0.3
+    # q2_st: 2.8415 # pi - 0.3
+    q2_st: 3.14
     Tsw: 0.3
     dq2: -0.6
     a_max: 0.2

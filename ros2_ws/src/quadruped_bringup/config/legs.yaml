@@ -1,10 +1,11 @@
-ik_node:
+/**:
   ros__parameters:
     legs:
       front_left:
         offset: [-0.02987, -0.0401, 0.02825]
         yaw: -2.0227
         q1_sign: -1
+        q1_dir: -1
         q2_sign: -1
         q2_zero: -2.9943
         femur_len: 0.0598
@@ -15,6 +16,7 @@ ik_node:
         offset: [-0.02987, 0.0401, 0.02825]
         yaw: 1.6365
         q1_sign: -1
+        q1_dir: 1
         q2_sign: 1
         q2_zero: -2.9861
         femur_len: 0.0598
@@ -25,6 +27,7 @@ ik_node:
         offset: [0.04173, -0.0401, 0.02825]
         yaw: -0.9243
         q1_sign: -1
+        q1_dir: -1
         q2_sign: -1
         q2_zero: -2.9861
         femur_len: 0.0598
@@ -35,6 +38,7 @@ ik_node:
         offset: [0.04173, 0.0401, 0.02825]
         yaw: 0.9205
         q1_sign: -1
+        q1_dir: 1
         q2_sign: 1
         q2_zero: -2.9861
         femur_len: 0.0598
