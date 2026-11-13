@@ -32,7 +32,9 @@ bool run(const std::string& name, const Gait& g, int min_expected, const
   const double dt = 0.02, t_end = 25.0;
   const double e = 1e-6;
 
-  GaitGenerator gait(g, cfg.params, cfg.a_max);
+  const GaitGenerator::Dirs dirs = {-1.0, 1.0, -1.0, 1.0};
+
+  GaitGenerator gait(g, cfg.params, cfg.a_max, dirs);
 
   std::ofstream f("gait_" + name + ".csv");
   f << "t,s_cmd,s";

@@ -2,6 +2,7 @@
 #include "quadruped_gait/trajectory.hh"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include <chrono>
+#include <quadruped_kinematics/kinematics.hh>
 #include "quadruped_gait/gait_generator.hh"
 #include "quadruped_config/config_loader.hh"
 
@@ -12,7 +13,15 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
   p.Tsw = declare_parameter("Tsw", 0.3);
   p.dq2 = declare_parameter("dq2", -0.6);
 
+  names = {"left_front_coxa", "left_front_tibia",
+          "right_front_coxa", "right_front_tibia",
+          "left_back_coxa", "left_back_tibia",
+          "right_back_coxa", "right_back_tibia"};
+
   cfg = loadConfig(*this);
+  GaitGenerator::Dirs dirs;
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i)
+    dirs[i] = cfg[i].mount.q1_dir;
 
   const auto gait_name = declare_parameter("gait", std::string("walk"));
   const double a_max = declare_parameter("a_max", 0.2);
@@ -20,8 +29,9 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
 
   speed_scale = declare_parameter("speed_scale", 1.0);
   cmd_timeout = declare_parameter("cmd_timeout", 0.5);
+  declare_parameter("time_scale", 1.0);
 
-  gen = std::make_unique<GaitGenerator>(gait_by_name(gait_name), p, a_max);
+  gen = std::make_unique<GaitGenerator>(gait_by_name(gait_name), p, a_max, dirs);
 
   pub = create_publisher<sensor_msgs::msg::JointState>("joint_cmd",
                                                        rclcpp::QoS(1).best_effort());
@@ -38,7 +48,8 @@ void GaitNode::on_cmd(const geometry_msgs::msg::Twist::SharedPtr msg) {
 
 void GaitNode::tick() {
   const auto t = now();
-  const double dt = std::min((t - last_tick).seconds(), 0.1);
+  const double t_scale = get_parameter("time_scale").as_double();
+  const double dt = std::min((t - last_tick).seconds(), 0.1) * t_scale;
   last_tick = t;
 
   if ((t - last_cmd).seconds() > cmd_timeout)

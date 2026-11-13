@@ -26,6 +26,7 @@ namespace quadruped {
     Vector3D offset;
     double yaw;
     double q1_sign;
+    double q1_dir;
     double q2_sign;
     double q2_zero;
   };

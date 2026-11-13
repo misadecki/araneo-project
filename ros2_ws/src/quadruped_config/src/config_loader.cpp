@@ -11,6 +11,7 @@ quadruped::RobotConfig loadConfig(rclcpp::Node &n) {
     c.mount.offset = {off[0], off[1], off[2]};
     c.mount.yaw = n.declare_parameter<double>(p + "yaw");
     c.mount.q1_sign = n.declare_parameter<int>(p + "q1_sign");
+    c.mount.q1_dir = n.declare_parameter<int>(p + "q1_dir");
     c.mount.q2_sign = n.declare_parameter<int>(p + "q2_sign");
     c.mount.q2_zero = n.declare_parameter<double>(p + "q2_zero");
 

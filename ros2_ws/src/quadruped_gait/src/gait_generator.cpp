@@ -13,8 +13,8 @@ static const Gait& validate_duty(const Gait& g, const TrajectoryParams& p) {
 }
 
 GaitGenerator::GaitGenerator(const Gait& gait, const TrajectoryParams& params,
-                              double a) : g(validate_duty(gait, params)), p(params), 
-                              a_max(a), ref(make_traj(gait, params)) {}
+                              double a, const Dirs& d) : g(validate_duty(gait, params)), p(params), 
+                              a_max(a), dir(d), ref(make_traj(gait, params)) {}
 
 GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   Targets out;
@@ -53,7 +53,7 @@ GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
     if (idle[i]) out[i] = rest;
     else {
       const auto j = ref.at(phi * ref.period());
-      out[i] = {s * j.q1, j.q2};
+      out[i] = {dir[i] * s * j.q1, j.q2};
     }
   }
 
