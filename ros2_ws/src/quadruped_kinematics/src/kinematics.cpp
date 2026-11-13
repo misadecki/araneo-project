@@ -2,25 +2,6 @@
 #include <cmath>
 
 namespace quadruped {
-  //from URDF file coxa links
-  const std::array<LegMount, LEG_COUNT> legMounts = {{
-    {{ -0.02987, -0.0401, 0.02825}, -2.0227, -1, -1, -2.9943}, //front left
-    {{-0.02987, 0.0401, 0.02825}, 1.6365, -1, 1, -2.9861}, //front right
-    {{0.04173, -0.0401, 0.02825}, -0.9243, -1, -1, -2.9861},  //back left
-    {{0.04173, 0.0401, 0.02825}, 0.9205, -1, 1, -2.9861}   //back right
-  }};
-
-  const std::array<LegGeometry, LEG_COUNT> legGeometries = {{
-    // double femur_len;
-    // double tibia_len;
-    // double femur_ang;
-    // double lateral;
-    {0.0598, 0.0436, -0.2633, 0.0105},
-    {0.0598, 0.0436, -0.2794, -0.0105},
-    {0.0598, 0.0436, -0.2794, 0.0096},
-    {0.0598, 0.0436, -0.2794, -0.0095}
-  }};
-
   static double wrap(double a) {
     return std::atan2(std::sin(a), std::cos(a));
   }
