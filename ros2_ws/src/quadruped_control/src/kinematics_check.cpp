@@ -28,15 +28,16 @@ namespace quadruped {
     for (size_t i = 2; i < 3; ++i) {
       const Leg leg = static_cast<Leg>(i);
       try {
+        const LegConfig& c = cfg[leg];
         const JointAngles theta = {pos(js, q1_joint[i]), pos(js, q2_joint[i])};
-        const JointAngles q = urdfToModel(theta, leg);
-        const Vector3D manual = legToBodyFrame(legFK(q, legGeometries[leg]), leg);
+        const JointAngles q = urdfToModel(theta, c.mount);
+        const Vector3D manual = legToBodyFrame(legFK(q, c.geom), c.mount);
         const auto t = buf.lookupTransform("base_link", foot_frame[i],
                                       tf2::TimePointZero).transform.translation;
         const Vector3D foot_tf = {t.x, t.y, t.z};
         const JointAngles ik_model = legIK(bodyToLegFrame(foot_tf,
-                              leg), legGeometries[leg]);
-        const JointAngles ik_urdf = urdfToModel(ik_model, leg);
+                              c.mount), c.geom);
+        const JointAngles ik_urdf = urdfToModel(ik_model, c.mount);
         /*
         RCLCPP_INFO(get_logger(), "Leg %zu: manual \033[32m(%.4f, %.4f,\
                                   %.4f)\033[0m | TF \
