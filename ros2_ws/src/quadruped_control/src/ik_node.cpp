@@ -1,4 +1,5 @@
 #include "quadruped_control/ik_node.hh"
+#include "quadruped_control/config_loader.hh"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
 #include <quadruped_kinematics/kinematics.hh>
@@ -13,7 +14,7 @@ namespace quadruped_control {
                                                                        msg)
                                                                 {onTargets(*msg);
                                                                 });
-  
+    cfg = loadConfig(*this);
   }
 
   void IkNode::onTargets(const std_msgs::msg::Float64MultiArray& msg) {
@@ -26,24 +27,22 @@ namespace quadruped_control {
     js.header.stamp = now();
     
     for (std::size_t i = 0; i < LEG_COUNT; ++i) {
-      const Leg leg = static_cast<Leg>(i);
       const Vector3D body = {msg.data[3 * i], 
                              msg.data[3 * i + 1],
                              msg.data[3 * i + 2]
       };
-
-      const JointAngles q = legIK(bodyToLegFrame(body, leg), legGeometries[leg]);
-      const JointAngles theta = modelToUrdf(q, leg);
+      const auto& c = cfg[i];
+      const JointAngles q = legIK(bodyToLegFrame(body, c.mount), c.geom);
+      const JointAngles theta = modelToUrdf(q, c.mount);
       
-      js.name.push_back(names[i] + "_coxa");
-      js.name.push_back(names[i] + "_tibia");
+      js.name.push_back(std::string(LEG_NAMES[i]) + "_coxa");
+      js.name.push_back(std::string(LEG_NAMES[i]) + "_tibia");
       js.position.push_back(theta.q1);
       js.position.push_back(theta.q2);
     }
     
     pub->publish(js);
   }
-
 };
 
 

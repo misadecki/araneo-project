@@ -11,8 +11,7 @@ namespace quadruped_control {
   class IkNode : public rclcpp::Node {
     void onTargets(const std_msgs::msg::Float64MultiArray& msg);
     quadruped::LegGeometry geom;
-    const std::array<std::string, quadruped::LEG_COUNT> names = {"left_front",
-      "right_front", "left_back", "right_back"};
+    quadruped::RobotConfig cfg = {};
 
     rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr pub;
     //placeholder
