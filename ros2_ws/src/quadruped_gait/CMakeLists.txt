@@ -41,6 +41,7 @@ target_link_libraries(test_gait quadruped_gait yaml-cpp)
 
 install(DIRECTORY include/ DESTINATION include)
 install(TARGETS quadruped_gait 
+  EXPORT export_${PROJECT_NAME}
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
@@ -48,6 +49,9 @@ install(TARGETS quadruped_gait
 install(TARGETS test_traj test_gait
   DESTINATION lib/${PROJECT_NAME}
 )
+
+ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
+ament_export_dependencies(quadruped_kinematics)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
