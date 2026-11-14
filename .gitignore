@@ -334,3 +334,5 @@ tags
 [._]*.un~
 
 secrets.h
+micro_ros_msgs
+micro-ROS-Agent
