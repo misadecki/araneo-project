@@ -10,7 +10,7 @@ manifest:
       revision: v4.1.0
       import: true
     - name: micro_ros_zephyr_module
-      remote: micro-ROS
+      remote: micro-ros
       revision: jazzy
       path: modules/lib/micro_ros_zephyr_module
   self:
