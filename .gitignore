@@ -336,3 +336,10 @@ tags
 secrets.h
 micro_ros_msgs
 micro-ROS-Agent
+
+# Zephyr
+zephyr
+modules
+bootloader
+tools
+.west
