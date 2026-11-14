@@ -1,9 +1,9 @@
-#include "button.h"
-#include "servo.h"
-#include "led.h"
-#include "buck.h"
-#include "wifi.h"
-#include "communication.h"
+// #include "button.h"
+// #include "servo.h"
+// #include "led.h"
+// #include "buck.h"
+// #include "wifi.h"
+// #include "communication.h"
 #include <zephyr/kernel.h>
 
 int main(void) {
@@ -22,14 +22,14 @@ int main(void) {
   //   return 4;
   // }
 
-  wifi_init();
-  communication_start_thread();
+  //wifi_init();
+  //communication_start_thread();
   // buck_on();
 
-  struct robot_command curr_cmd;
+  //struct robot_command curr_cmd;
 
   while (1) {
-    get_latest_command(&curr_cmd);
+   // get_latest_command(&curr_cmd);
     // toggle_led();
     k_msleep(2000);
   }

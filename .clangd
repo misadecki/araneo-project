@@ -1,0 +1,14 @@
+CompileFlags:
+  CompilationDatabase: firmware/build
+  Remove:
+    - -mcpu=*
+    - -mfp16-format*
+    - -fno-reorder-functions
+    - -fno-defer-pop
+    - -fno-printf-return-value
+    - -fno-freestanding
+    - -specs=*
+  Add:
+    - --target=arm-none-eabi
+    - -mcpu=cortex-m33+nodsp+nofp
+    - -mfloat-abi=soft
