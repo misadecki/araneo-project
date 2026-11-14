@@ -1,5 +1,6 @@
 #include "quadruped_gait_node/gait_node.hh"
 #include "quadruped_gait/trajectory.hh"
+#include "quadruped_msgs/msg/servo_cmd.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include <chrono>
 #include <quadruped_kinematics/kinematics.hh>
@@ -35,6 +36,8 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
 
   pub = create_publisher<sensor_msgs::msg::JointState>("joint_cmd",
                                                        rclcpp::QoS(1).best_effort());
+  servo_pub = create_publisher<quadruped_msgs::msg::ServoCmd>("servo_cmd",
+                                                              rclcpp::QoS(1).best_effort());
   sub = create_subscription<geometry_msgs::msg::Twist>("cmd_vel", 10,
                           [this](geometry_msgs::msg::Twist::SharedPtr m) {on_cmd(m);});
   tim = create_wall_timer(std::chrono::duration<double>(1.0 / rate), [this]
@@ -68,5 +71,11 @@ void GaitNode::tick() {
     msg.position.push_back(th.q2);
   }
 
+  quadruped_msgs::msg::ServoCmd cmd;
+  cmd.seq = ++seq;
+  for (std::size_t k = 0; k < quadruped::LEG_COUNT * 2; ++k)
+    cmd.angle_rad[k] = static_cast<float>(msg.position[k]);
+  
+  servo_pub->publish(cmd);
   pub->publish(msg);
 }

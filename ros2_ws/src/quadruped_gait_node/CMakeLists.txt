@@ -11,6 +11,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(quadruped_gait REQUIRED)
 find_package(quadruped_config REQUIRED)
+find_package(quadruped_msgs REQUIRED)
 
 add_executable(gait_node
   src/gait_node.cpp
@@ -29,7 +30,7 @@ install(TARGETS gait_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
-ament_target_dependencies(gait_node rclcpp sensor_msgs)
+ament_target_dependencies(gait_node rclcpp sensor_msgs quadruped_msgs)
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
