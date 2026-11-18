@@ -76,10 +76,14 @@ static void micro_ros_thread(void *a, void *b, void *c) {
     }
 
     LOG_WRN("Agent lost. Reconnecting..");
-    rclc_executor_fini(&exec);
-    rcl_subscription_fini(&sub, &node);
-    rcl_node_fini(&node);
-    rclc_support_fini(&support);
+    if (rclc_executor_fini(&exec) != RCL_RET_OK)
+      LOG_ERR("executor deinit failed");
+    if (rcl_subscription_fini(&sub, &node) != RCL_RET_OK)
+      LOG_ERR("sub deinit failed");
+    if (rcl_node_fini(&node) != RCL_RET_OK)
+      LOG_ERR("node deinit failed");
+    if (rclc_support_fini(&support) != RCL_RET_OK)
+      LOG_ERR("support deinit failed");
   }
 }
 
