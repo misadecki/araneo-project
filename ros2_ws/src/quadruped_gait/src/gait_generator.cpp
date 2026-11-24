@@ -13,18 +13,21 @@ static const Gait& validate_duty(const Gait& g, const TrajectoryParams& p) {
 }
 
 GaitGenerator::GaitGenerator(const Gait& gait, const TrajectoryParams& params,
-                              double a, const Dirs& d) : g(validate_duty(gait, params)), p(params), 
-                              a_max(a), dir(d), ref(make_traj(gait, params)) {}
+                              double a, const Dirs& d, const Arms& arm_) : g(validate_duty(gait, params)), p(params), 
+                              a_max(a), dir(d), arm(arm_), ref(make_traj(gait, params)) {}
 
 GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   Targets out;
   const double ds = a_max * dt;
-  s += std::clamp(s_cmd - s, -ds, ds);
-  
-  const bool stopping = (std::abs(s_cmd) < MIN_SPEED && std::abs(s) <
-                                                           MIN_SPEED);
-  const bool all_idle = std::all_of(idle.begin(), idle.end(), [](bool b) {return b;});
+  bool stopping = true;
 
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
+    s[i] += std::clamp(s_cmd[i] - s[i], -ds, ds);
+    if (std::abs(s_cmd[i]) >= MIN_SPEED || std::abs(s[i]) >= MIN_SPEED)
+      stopping = false;
+  }
+  
+  const bool all_idle = std::all_of(idle.begin(), idle.end(), [](bool b) {return b;});
   const FootTrajectory::Joints rest = {0.0, p.q2_st};
 
   if (stopping && all_idle) {
@@ -35,14 +38,14 @@ GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   if (all_idle) {
     phase = 0.0;
     idle.fill(false);
-    for (int i = 0; i < static_cast<int>(quadruped::LEG_COUNT); ++i) {
+    for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
       prev_phi[i] = leg_phase(i);
     }
   }
 
   phase = std::fmod(phase + dt / ref.period(), 1.0);
 
-  for (int i = 0; i < static_cast<int>(quadruped::LEG_COUNT); ++i) {
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
     const double phi = leg_phase(i);
     
     if (phi < prev_phi[i])
@@ -53,7 +56,7 @@ GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
     if (idle[i]) out[i] = rest;
     else {
       const auto j = ref.at(phi * ref.period());
-      out[i] = {dir[i] * s * j.q1, j.q2};
+      out[i] = {dir[i] * s[i] * j.q1, j.q2};
     }
   }
 
