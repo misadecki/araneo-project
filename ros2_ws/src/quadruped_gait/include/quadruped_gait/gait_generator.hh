@@ -18,7 +18,7 @@ public:
   void set_cmd(double v, double w);
   double period() const {return ref.period();}
   Targets foot_targets(double dt);
-  inline double speed() const;
+  const std::array<double, quadruped::LEG_COUNT>& speeds() const {return s;} 
 private:
   Gait g;
   TrajectoryParams p;
