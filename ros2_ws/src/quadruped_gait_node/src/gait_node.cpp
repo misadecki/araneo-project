@@ -1,7 +1,5 @@
 #include "quadruped_gait_node/gait_node.hh"
 #include "quadruped_gait/trajectory.hh"
-#include "quadruped_msgs/msg/servo_cmd.hpp"
-#include "sensor_msgs/msg/joint_state.hpp"
 #include <chrono>
 #include <quadruped_kinematics/kinematics.hh>
 #include "quadruped_gait/gait_generator.hh"
@@ -14,38 +12,38 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
   p.Tsw = declare_parameter("Tsw", 0.3);
   p.dq2 = declare_parameter("dq2", -0.6);
 
-  names = {"left_front_coxa", "left_front_tibia",
-          "right_front_coxa", "right_front_tibia",
-          "left_back_coxa", "left_back_tibia",
-          "right_back_coxa", "right_back_tibia"};
-
-  cfg = loadConfig(*this);
-  GaitGenerator::Dirs dirs;
-  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i)
-    dirs[i] = cfg[i].mount.q1_dir;
-
   const auto gait_name = declare_parameter("gait", std::string("walk"));
   const double a_max = declare_parameter("a_max", 0.2);
   const double rate = declare_parameter("rate_hz", 50.0);
+  const double v_ref = declare_parameter("v_ref", 0.10);
+
+  cfg = loadConfig(*this);
+  GaitGenerator::Dirs dirs;
+  GaitGenerator::Arms arm;
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
+    dirs[i] = cfg[i].mount.q1_dir;
+    const auto p_leg = quadruped::legFK({0.0, p.q2_st}, cfg[i].geom);
+    const auto p_body = quadruped::legToBodyFrame(p_leg, cfg[i].mount);
+    arm[i] = p_body.y / v_ref;
+  }
+
 
   speed_scale = declare_parameter("speed_scale", 1.0);
+  turn_scale = declare_parameter("turn_scale", 1.0);
   cmd_timeout = declare_parameter("cmd_timeout", 0.5);
   declare_parameter("time_scale", 1.0);
 
-  gen = std::make_unique<GaitGenerator>(gait_by_name(gait_name), p, a_max, dirs);
+  gen = std::make_unique<GaitGenerator>(gait_by_name(gait_name), p, a_max, dirs,
+                                        arm);
 
-  pub = create_publisher<sensor_msgs::msg::JointState>("joint_cmd",
-                                                       rclcpp::QoS(1).best_effort());
-  servo_pub = create_publisher<quadruped_msgs::msg::ServoCmd>("servo_cmd",
-                                                              rclcpp::QoS(1).best_effort());
-  sub = create_subscription<geometry_msgs::msg::Twist>("cmd_vel", 10,
-                          [this](geometry_msgs::msg::Twist::SharedPtr m) {on_cmd(m);});
-  tim = create_wall_timer(std::chrono::duration<double>(1.0 / rate), [this]
+  foot_pub = create_publisher<quadruped_msgs::msg::FootTargets>("foot_targets",
+                                                                rclcpp::QoS(1).best_effort());
+  tim = create_timer(std::chrono::duration<double>(1.0 / rate), [this]
                           {tick();});
 }
 
 void GaitNode::on_cmd(const geometry_msgs::msg::Twist::SharedPtr msg) {
-  gen->set_speed(msg->linear.x * speed_scale);
+  gen->set_cmd(msg->linear.x * speed_scale, msg->angular.z * turn_scale);
   last_cmd = now();
 }
 
@@ -56,26 +54,19 @@ void GaitNode::tick() {
   last_tick = t;
 
   if ((t - last_cmd).seconds() > cmd_timeout)
-    gen->set_speed(0.0);
+    gen->set_cmd(0.0, 0.0);
 
   const auto targets = gen->foot_targets(dt);
 
-  sensor_msgs::msg::JointState msg;
-  msg.header.stamp = t;
-  msg.name.assign(names.begin(), names.end());
+  quadruped_msgs::msg::FootTargets msg;
 
   for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
-    const auto th = quadruped::modelToUrdf({targets[i].q1, targets[i].q2},
-                                           cfg[i].mount);
-    msg.position.push_back(th.q1);
-    msg.position.push_back(th.q2);
+    const auto p_leg = quadruped::legFK({targets[i].q1, targets[i].q2},
+                                        cfg[i].geom);
+    const auto p_body = quadruped::legToBodyFrame(p_leg, cfg[i].mount);
+    msg.position[3 * i] = static_cast<float>(p_body.x);
+    msg.position[3 * i + 1] = static_cast<float>(p_body.y);
+    msg.position[3 * i + 2] = static_cast<float>(p_body.z);
   }
-
-  quadruped_msgs::msg::ServoCmd cmd;
-  cmd.seq = ++seq;
-  for (std::size_t k = 0; k < quadruped::LEG_COUNT * 2; ++k)
-    cmd.angle_rad[k] = static_cast<float>(msg.position[k]);
-  
-  servo_pub->publish(cmd);
-  pub->publish(msg);
+  foot_pub->publish(msg);
 }
