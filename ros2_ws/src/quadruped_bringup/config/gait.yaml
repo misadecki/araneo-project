@@ -10,3 +10,5 @@ gait_node:
     rate_hz: 50.0
     speed_scale: 1.0
     cmd_timeout: 0.5
+    turn_scale: 1.0
+    v_ref: 0.1

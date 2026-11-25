@@ -2,20 +2,22 @@
 #define IK_NODE_HH
 
 #include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/float64_multi_array.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
 #include "quadruped_kinematics/kinematics.hh"
-#include "std_msgs/msg/float64_multi_array.hpp"
+#include "quadruped_msgs/msg/foot_targets.hpp"
+#include "quadruped_msgs/msg/servo_cmd.hpp"
 
 namespace quadruped_control {
   class IkNode : public rclcpp::Node {
-    void onTargets(const std_msgs::msg::Float64MultiArray& msg);
+    void onTargets(const quadruped_msgs::msg::FootTargets& msg);
     quadruped::LegGeometry geom;
     quadruped::RobotConfig cfg = {};
+    int seq = 0;
+    double ik_tol;
 
-    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr pub;
-    //placeholder
-    rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr sub;
+    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pub;
+    rclcpp::Publisher<quadruped_msgs::msg::ServoCmd>::SharedPtr servo_pub;
+    rclcpp::Subscription<quadruped_msgs::msg::FootTargets>::SharedPtr sub;
   public:
     IkNode();
   };

@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
+find_package(quadruped_msgs REQUIRED)
 find_package(quadruped_kinematics REQUIRED)
 find_package(quadruped_config REQUIRED)
 find_package(tf2_ros REQUIRED)
@@ -19,10 +19,11 @@ add_executable(ik_node src/ik_node.cpp src/ik_node_main.cpp)
 target_include_directories(ik_node PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
-ament_target_dependencies(ik_node rclcpp sensor_msgs std_msgs)
+ament_target_dependencies(ik_node rclcpp sensor_msgs quadruped_msgs)
 target_link_libraries(ik_node 
   quadruped_kinematics::quadruped_kinematics
   quadruped_config::quadruped_config
+  quadruped_msgs::quadruped_msgs
 )
 
 add_executable(k_check src/kinematics_check.cpp)
