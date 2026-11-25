@@ -128,11 +128,11 @@ bool run(const std::string& name, const Gait& g, int min_expected, const
   const bool ground_ok = min_ground >= min_expected;
 
   std::cout << "== " << name << " (T = " << gait.period() << " [s]) == \n"
-    << "min legs in stance (strady state): " << min_ground << " (expected >= " <<
+    << "min legs in stance (steady state): " << min_ground << " (expected >= " <<
     min_expected << ") " << (ground_ok ? ":)" : ":(") << '\n'
     << "speed signs per segment: " << (dir_ok ? ":)" : ":(") << '\n'
     << "idle position in the end: " << (rest_ok ? ":)" : ":(") << '\n' 
-    << "q1_max = " << q1_max_deg << "deg/s, q2_max = " << q2_max_deg << "deg/s" 
+    << "q1_max = " << q1_max_deg << "deg/s, q2_max = " << q2_max_deg << "deg/s " 
     << (servo_ok ? ":)" : ":(") << "\n\n";
 
   return ground_ok && rest_ok && servo_ok;
