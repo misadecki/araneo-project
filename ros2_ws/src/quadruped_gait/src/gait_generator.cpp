@@ -1,6 +1,7 @@
 #include "quadruped_gait/gait_generator.hh"
 #include "quadruped_gait/trajectory.hh"
 #include <algorithm>
+#include <quadruped_kinematics/kinematics.hh>
 #include <stdexcept>
 
 static const Gait& validate_duty(const Gait& g, const TrajectoryParams& p) {
@@ -15,6 +16,18 @@ static const Gait& validate_duty(const Gait& g, const TrajectoryParams& p) {
 GaitGenerator::GaitGenerator(const Gait& gait, const TrajectoryParams& params,
                               double a, const Dirs& d, const Arms& arm_) : g(validate_duty(gait, params)), p(params), 
                               a_max(a), dir(d), arm(arm_), ref(make_traj(gait, params)) {}
+
+void GaitGenerator::set_cmd(double v, double w) {
+  std::array<double, quadruped::LEG_COUNT> raw;
+  double m = 1.0;
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i) {
+    raw[i] = v - w * arm[i];
+    m = std::max(m, std::abs(raw[i]));
+  }
+
+  for (std::size_t i = 0; i < quadruped::LEG_COUNT; ++i)
+    s_cmd[i] = raw[i] / m;
+}
 
 GaitGenerator::Targets GaitGenerator::foot_targets(double dt) {
   Targets out;
