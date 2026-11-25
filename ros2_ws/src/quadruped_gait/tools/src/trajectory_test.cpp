@@ -1,14 +1,13 @@
 #include "quadruped_gait/trajectory.hh"
 #include "quadruped_kinematics/kinematics.hh"
 #include <fstream>
-#include <cmath>
 #include <iomanip>
 #include <stdexcept>
 #include "gait_config.hh"
 #include <iostream>
 
 int main(int argc, char** argv) {
-  if (argc < 1)
+  if (argc < 2)
     throw std::runtime_error("You need to pass YAML path.");
   const std::string path = argv[1];
   GaitConfig cfg = {};
@@ -20,7 +19,8 @@ int main(int argc, char** argv) {
   }
 
   // q1_m, q2_st, w, Tsw, dq2
-  const FootTrajectory traj(cfg.params);
+  const FootTrajectory traj = make_traj(WALK, cfg.params);
+
   //LF, FR, BL, BR
   const quadruped::LegGeometry geom =
     {0.0598, 0.0436, -0.2633, 0.0105};
