@@ -144,28 +144,28 @@
             </material>
         </visual>
     </link>
-    <link name="left_back_foot">
+    <link name="back_left_foot">
         <inertial>
             <mass value="1e-09" />
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <inertia ixx="4e-14" ixy="0" ixz="0" iyy="4e-14" iyz="0" izz="4e-14" />
         </inertial>
     </link>
-    <link name="left_front_foot">
+    <link name="front_left_foot">
         <inertial>
             <mass value="1e-09" />
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <inertia ixx="4e-14" ixy="0" ixz="0" iyy="4e-14" iyz="0" izz="4e-14" />
         </inertial>
     </link>
-    <link name="right_back_foot">
+    <link name="back_right_foot">
         <inertial>
             <mass value="1e-09" />
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <inertia ixx="4e-14" ixy="0" ixz="0" iyy="4e-14" iyz="0" izz="4e-14" />
         </inertial>
     </link>
-    <link name="right_front_foot">
+    <link name="front_right_foot">
         <inertial>
             <mass value="1e-09" />
             <origin xyz="0 0 0" rpy="0 -0 0" />
@@ -389,65 +389,65 @@
         <parent link="body_bottom" />
         <child link="head" />
     </joint>
-    <joint name="left_back_coxa" type="revolute">
+    <joint name="back_left_coxa" type="revolute">
         <origin xyz="-2.77556e-17 0.00455 0.02675" rpy="1.5708 1.20082e-14 3.14159" />
         <axis xyz="0 -1 0" />
         <parent link="servo_1" />
         <child link="femur_left" />
         <limit effort="1" velocity="1" lower="-0.907571" upper="1.13446" />
     </joint>
-    <joint name="left_back_coxa_servo" type="fixed">
+    <joint name="back_left_coxa_servo" type="fixed">
         <origin xyz="0.0371779 -0.0401 0.0015" rpy="-2.84495e-16 -6.59195e-17 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="body_bottom" />
         <child link="servo_1" />
     </joint>
-    <joint name="left_back_foot" type="fixed">
+    <joint name="back_left_foot" type="fixed">
         <origin xyz="0.04974 0.008027 -0.006747" rpy="-1.5708 -0 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="tibia_left_1" />
-        <child link="left_back_foot" />
+        <child link="back_left_foot" />
     </joint>
-    <joint name="left_back_tibia" type="revolute">
+    <joint name="back_left_tibia" type="revolute">
         <origin xyz="-0.0525502 -0.0165 0.0251987" rpy="3.14159 -0.610865 3.14159" />
         <axis xyz="0 0 1" />
         <parent link="femur_left" />
         <child link="servo_6" />
         <limit effort="1" velocity="1" lower="0" upper="3.08923" />
     </joint>
-    <joint name="left_back_tibia_servo" type="fixed">
+    <joint name="back_left_tibia_servo" type="fixed">
         <origin xyz="-2.77556e-17 0.0067 -0.01105" rpy="-1.5708 -1.0103e-14 -1.5708" />
         <axis xyz="-1.98254e-16 -1 0" />
         <parent link="servo_6" />
         <child link="tibia_left_1" />
     </joint>
-    <joint name="left_front_coxa" type="revolute">
+    <joint name="front_left_coxa" type="revolute">
         <origin xyz="1.38778e-17 0.00455 0.02675" rpy="1.5708 -1.86759e-15 -3.03917e-15" />
         <axis xyz="0 -1 0" />
         <parent link="servo" />
         <child link="femur_left_1" />
         <limit effort="1" velocity="1" lower="-0.872665" upper="1.16937" />
     </joint>
-    <joint name="left_front_coxa_servo" type="fixed">
+    <joint name="front_left_coxa_servo" type="fixed">
         <origin xyz="-0.0253221 -0.0401 0.0015" rpy="-3.46945e-18 3.46945e-18 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="body_bottom" />
         <child link="servo" />
     </joint>
-    <joint name="left_front_foot" type="fixed">
+    <joint name="front_left_foot" type="fixed">
         <origin xyz="0.04974 0.008027 -0.006387" rpy="-1.5708 -5.55112e-17 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="tibia_left" />
-        <child link="left_front_foot" />
+        <child link="front_left_foot" />
     </joint>
-    <joint name="left_front_tibia" type="revolute">
+    <joint name="front_left_tibia" type="revolute">
         <origin xyz="-0.0511252 -0.0155 -0.0276535" rpy="3.14159 0.349066 3.14159" />
         <axis xyz="0 0 1" />
         <parent link="femur_left_1" />
         <child link="servo_7" />
         <limit effort="1" velocity="1" lower="0" upper="3.08923" />
     </joint>
-    <joint name="left_front_tibia_servo" type="fixed">
+    <joint name="front_left_tibia_servo" type="fixed">
         <origin xyz="0 0.0067 -0.01105" rpy="-1.5708 5.55112e-16 -1.5708" />
         <axis xyz="-1.98254e-16 -1 0" />
         <parent link="servo_7" />
@@ -459,65 +459,65 @@
         <parent link="base_link" />
         <child link="body_bottom" />
     </joint>
-    <joint name="right_back_coxa" type="revolute">
+    <joint name="back_right_coxa" type="revolute">
         <origin xyz="1.38778e-17 0.00455 0.02675" rpy="1.5708 -9.18284e-15 -9.97054e-15" />
         <axis xyz="0 -1 0" />
         <parent link="servo_3" />
         <child link="femur_right_1" />
         <limit effort="1" velocity="1" lower="-1.13446" upper="0.907571" />
     </joint>
-    <joint name="right_back_coxa_servo" type="fixed">
+    <joint name="back_right_coxa_servo" type="fixed">
         <origin xyz="0.0371779 0.0401 0.0015" rpy="-2.84495e-16 -6.59195e-17 -1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="body_bottom" />
         <child link="servo_3" />
     </joint>
-    <joint name="right_back_foot" type="fixed">
+    <joint name="back_right_foot" type="fixed">
         <origin xyz="0.04974 -0.007973 -0.006747" rpy="-1.5708 -0 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="tibia_right_1" />
-        <child link="right_back_foot" />
+        <child link="back_right_foot" />
     </joint>
-    <joint name="right_back_tibia" type="revolute">
+    <joint name="back_right_tibia" type="revolute">
         <origin xyz="-0.0525502 -0.0165 -0.0251987" rpy="4.81199e-15 -0.610865 -8.44131e-15" />
         <axis xyz="0 0 1" />
         <parent link="femur_right_1" />
         <child link="servo_5" />
         <limit effort="1" velocity="1" lower="-3.08923" upper="7.10543e-15" />
     </joint>
-    <joint name="right_back_tibia_servo" type="fixed">
+    <joint name="back_right_tibia_servo" type="fixed">
         <origin xyz="-1.38778e-17 0.0067 -0.01105" rpy="1.5708 1.11022e-16 -1.5708" />
         <axis xyz="0 1 0" />
         <parent link="servo_5" />
         <child link="tibia_right_1" />
     </joint>
-    <joint name="right_front_coxa" type="revolute">
+    <joint name="front_right_coxa" type="revolute">
         <origin xyz="6.93889e-18 0.00455 0.02675" rpy="1.5708 1.72071e-15 3.14159" />
         <axis xyz="0 -1 0" />
         <parent link="servo_2" />
         <child link="femur_right" />
         <limit effort="1" velocity="1" lower="-1.16937" upper="0.872665" />
     </joint>
-    <joint name="right_front_coxa_servo" type="fixed">
+    <joint name="front_right_coxa_servo" type="fixed">
         <origin xyz="-0.0253221 0.0401 0.0015" rpy="-3.46945e-18 3.46945e-18 1.5708" />
         <axis xyz="0 0 -1" />
         <parent link="body_bottom" />
         <child link="servo_2" />
     </joint>
-    <joint name="right_front_foot" type="fixed">
+    <joint name="front_right_foot" type="fixed">
         <origin xyz="0.04974 -0.007973 -0.006747" rpy="-1.5708 -0 1.5708" />
         <axis xyz="0 0 1" />
         <parent link="tibia_right" />
-        <child link="right_front_foot" />
+        <child link="front_right_foot" />
     </joint>
-    <joint name="right_front_tibia" type="revolute">
+    <joint name="front_right_tibia" type="revolute">
         <origin xyz="-0.0511252 -0.0165 0.0276535" rpy="-1.90177e-14 0.349066 -5.68686e-14" />
         <axis xyz="0 0 1" />
         <parent link="femur_right" />
         <child link="servo_4" />
         <limit effort="1" velocity="1" lower="-3.08923" upper="5.41789e-14" />
     </joint>
-    <joint name="right_front_tibia_servo" type="fixed">
+    <joint name="front_right_tibia_servo" type="fixed">
         <origin xyz="1.38778e-17 0.0067 -0.01105" rpy="1.5708 5.55112e-17 -1.5708" />
         <axis xyz="0 1 0" />
         <parent link="servo_4" />
