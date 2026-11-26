@@ -343,3 +343,5 @@ modules
 bootloader
 tools
 .west
+
+results
