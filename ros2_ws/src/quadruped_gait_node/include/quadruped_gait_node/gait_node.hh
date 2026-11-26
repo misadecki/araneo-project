@@ -11,6 +11,7 @@ class GaitNode : public rclcpp::Node {
   uint32_t seq = 0;
   rclcpp::TimerBase::SharedPtr tim;
   rclcpp::Publisher<quadruped_msgs::msg::FootTargets>::SharedPtr foot_pub;
+  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub;
   rclcpp::Time last_cmd, last_tick;
   double cmd_timeout, speed_scale, turn_scale;
   std::unique_ptr<GaitGenerator> gen;

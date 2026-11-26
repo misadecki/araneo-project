@@ -38,6 +38,9 @@ GaitNode::GaitNode() : Node("gait_node"), last_cmd(now()), last_tick(now()) {
 
   foot_pub = create_publisher<quadruped_msgs::msg::FootTargets>("foot_targets",
                                                                 rclcpp::QoS(1).best_effort());
+  sub = create_subscription<geometry_msgs::msg::Twist>("cmd_vel", 10,
+                                                       [this](geometry_msgs::msg::Twist::SharedPtr
+                                                              m) {on_cmd(m);});
   tim = create_timer(std::chrono::duration<double>(1.0 / rate), [this]
                           {tick();});
 }
